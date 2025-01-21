@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Nguyen | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #1c1c1c;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4caf50;
+        }
+
+        header {
+            height: 70vh;
+            background-color: #1c1c1c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 20px 0 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+            color: #a0a0a0;
+        }
+
+        .hello-badge {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #f5f5f5;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #4caf50;
+        }
+
+        .section {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 30px auto;
+            background: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #1c1c1c;
+            color: #a0a0a0;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header>
+        <span class="hello-badge">Hello There!</span>
+        <h1>I'M Kyle Nguyen</h1>
+        <p>Computer Science Student | Machine Learning Enthusiast</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">&#9733;</a>
+            <a href="#" target="_blank">&#9733;</a>
+            <a href="#" target="_blank">&#9733;</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Khanh Nguyen, a passionate Computer Science student specializing in Machine Learning and Game Development. I love solving problems, building interactive applications.</p>
+        <p>I’m currently pursuing my Bachelor of Science in Computer Science with a focus on Machine Learning at Digipen Institute of Technology.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Shifter (C, C++)</h3>
+            <p>A 2D platformer game where players navigate through portals to solve puzzles. Published on Steam.</p>
+            <p><a href="https://store.steampowered.com/app/3091540/Shifter/" target="_blank">View on Steam</a></p>
+        </div>
+
+        <div class="project">
+            <h3>Sky Slinger (C, C++)</h3>
+            <p>A platformer game featuring a grappling mechanic for traversal. Designed levels, controls, and HUD.</p>
+        </div>
+
+        <div class="project">
+            <h3>Tic Tac Toe (Java)</h3>
+            <p>A game using the Minimax algorithm for an intelligent AI opponent with a graphical user interface.</p>
+        </div>
+
+        <div class="project">
+            <h3>3D Printing and Car Maintenance</h3>
+            <p>Created household items with FDM/SLA printers and performed DIY vehicle repairs.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Java, Python, C/C++, SQL, HTML, CSS</li>
+            <li>Game Development: Unity</li>
+            <li>Developer Tools: Git, VS, IntelliJ, WSL, MySQL</li>
+            <li>Libraries: pandas, NumPy, Matplotlib, Seaborn, Scikit Learn, </li>
+            <li>Core Knowledge: OOP, Data Structures, Data Analysis, Algorithms, Machine Learning</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kyle.nguyen@digipen.edu">kyle.nguyen@digipen.edu</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/khanh-nguyen-468631223" target="_blank">linkedin.com/in/khanh-nguyen</a></p>
+        <p><a href="Khanh_Nguyen_Resume.pdf" download>Download My Resume</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kyle Nguyen. All Rights Reserved.</p>
+        <p>
+            <a href="https://github.com" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
