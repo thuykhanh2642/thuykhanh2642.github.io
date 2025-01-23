@@ -71,23 +71,6 @@
             margin-bottom: 20px;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            color: #f5f5f5;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #4caf50;
-        }
-
         .section {
             padding: 50px;
             max-width: 1200px;
@@ -103,8 +86,13 @@
             color: #4caf50;
         }
 
-        iframe {
-            border: none;
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            color: #4caf50;
+            margin-bottom: 5px;
         }
 
         footer {
@@ -138,32 +126,57 @@
         <span class="hello-badge">Hello There!</span>
         <h1>I'M Kyle Nguyen</h1>
         <p>Computer Science Student | Machine Learning Enthusiast</p>
-        <div class="social-icons">
-            <a href="https://github.com/thuykhanh2642" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/khanh-nguyen-468631223" target="_blank">LinkedIn</a>
-        </div>
     </header>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hello! I'm Khanh Nguyen, a passionate Computer Science student specializing in Machine Learning and Game Development. I love solving problems, building interactive applications.</p>
-        <p>I’m currently pursuing my Bachelor of Science in Computer Science with a focus on Machine Learning at Digipen Institute of Technology.</p>
-    </section>
 
     <section id="projects" class="section">
         <h2>Projects</h2>
-        <!-- Existing projects content -->
+
+        <div class="project">
+            <h3>Stock Trend Prediction Model (Python, Machine Learning)</h3>
+            <p>Developed a machine learning model to predict stock trends using seven years of historical financial data.</p>
+            <p>Engineered features like RSI, EMA, and volatility to improve model performance and reduce overfitting.</p>
+            <p>Experimented with multiple ML models, including Lasso Regression and Random Forest Regressor, achieving robust evaluations with TimeSeriesSplit.</p>
+        </div>
+
+        <div class="project">
+            <h3>Shifter (C, C++)</h3>
+            <p>A 2D platformer game where players navigate through portals to solve puzzles. Published on Steam and Itch.io.</p>
+            <p><a href="https://store.steampowered.com/app/3091540/Shifter/" target="_blank">View on Steam</a></p>
+        </div>
+
+        <div class="project">
+            <h3>Sky Slinger (C, C++)</h3>
+            <p>Developed a 2D platformer game featuring a unique grappling mechanic for traversal. Designed levels, controls, and HUD to enhance gameplay.</p>
+        </div>
+
+        <div class="project">
+            <h3>Caro - Five in a Roll (Python)</h3>
+            <p>Created a game using the Minimax algorithm for an intelligent AI opponent. Designed a graphical user interface for seamless user interaction.</p>
+            <p><a href="https://github.com/thuykhanh2642/Caro-Five-in-a-roll" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <div class="project">
+            <h3>3D Printing and Car Maintenance</h3>
+            <p>Utilized FDM/SLA printers to create household items and conducted DIY vehicle repairs, showcasing problem-solving and technical skills.</p>
+        </div>
+
     </section>
 
     <section id="skills" class="section">
         <h2>Skills</h2>
-        <!-- Existing skills content -->
+        <ul>
+            <li>Programming Languages: Java, Python, C/C++, SQL, HTML, CSS</li>
+            <li>Game Development: Unity</li>
+            <li>Developer Tools: Git, Visual Studio, IntelliJ, WSL, MySQL</li>
+            <li>Libraries: pandas, NumPy, Matplotlib, Seaborn, Scikit Learn</li>
+            <li>Core Knowledge: OOP, Data Structures, Algorithms, Machine Learning</li>
+        </ul>
     </section>
 
     <section id="resume" class="section">
         <h2>Resume</h2>
-        <a href="KhanhNguyen_Resume.pdf" download>Download my resume</a>
-        <iframe src="Khanh_Nguyen_Resume.pdf" width="100%" height="600px"></iframe>
+        <p>Download my resume: <a href="KhanhNguyen_Resume.pdf" download>Click Here</a></p>
+        <iframe src="KhanhNguyen_Resume.pdf" width="100%" height="600px"></iframe>
     </section>
 
     <section id="contact" class="section">
