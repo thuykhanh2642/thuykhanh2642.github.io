@@ -313,6 +313,34 @@ h1{
   background:rgba(134,232,255,.08);
   border:1px solid rgba(134,232,255,.16);
 }
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.image-card{
+  overflow:hidden;
+  padding:0;
+}
+.image-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.image-caption{
+  padding:14px 16px;
+  background:rgba(6,14,24,.88);
+  color:var(--muted);
+  font-size:.92rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.note-card{
+  padding:18px 20px;
+  border-radius:var(--radius-lg);
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+}
 .timeline{display:grid;gap:16px}
 .timeline-step{
   padding:18px;
@@ -347,7 +375,7 @@ footer{padding:10px 0 52px;color:var(--muted)}
 @media (max-width:980px){
   .hero{min-height:auto;padding-top:28px}
   .hero-grid,.grid-2,.cta-grid,.resume-grid,.contact-grid,.case-grid,.stats-grid,.projects-grid,.skills-grid,.grid-3{grid-template-columns:1fr}
-  .media-grid{grid-template-columns:1fr}
+  .media-grid,.image-grid{grid-template-columns:1fr}
   iframe{height:560px}
 }
 @media (max-width:720px){
