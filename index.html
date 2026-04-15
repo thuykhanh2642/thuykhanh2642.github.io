@@ -1,214 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khanh Nguyen | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-
-        nav {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: #1c1c1c;
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        nav a {
-            color: #f5f5f5;
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #4caf50;
-        }
-
-        header {
-            height: 70vh;
-            background-color: #1c1c1c;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 20px 0 10px;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin: 10px 0 20px;
-            color: #a0a0a0;
-        }
-
-        .hello-badge {
-            display: inline-block;
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            padding: 50px;
-            max-width: 1200px;
-            margin: 30px auto;
-            background: #1c1c1c;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        .section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #4caf50;
-        }
-
-        .project {
-            margin-bottom: 20px;
-        }
-
-        .project h3 {
-            color: #4caf50;
-            margin-bottom: 5px;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #1c1c1c;
-            color: #a0a0a0;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: #4caf50;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khanh Nguyen builds reinforcement learning systems, ML applications, and game software.">
+  <title>Khanh Nguyen | ML & Software Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <header>
-        <span class="hello-badge">Hello There!</span>
-        <h1>I'm Khanh Nguyen</h1>
-        <p>Computer Science Student | Machine Learning Enthusiast</p>
-    </header>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>A Computer Science student with a strong interest in Machine Learning, Software Development, and Game Development. I have experience in developing machine learning models, working on stock trend predictions, and creating interactive applications. When I'm not coding, I enjoy 3D printing and working on DIY projects. Feel free to explore my portfolio and reach out!</p>
-    </section>
-    
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Stock Prediction Model (Python, Machine Learning, Streamlit)</h3>
-            <ul>
-                <li>Implemented TimeSeriesSplit cross-validation and RandomizedSearchCV for hyperparameter tuning.</li>
-                <li>Developed an interactive Streamlit dashboard for real-time stock trend analysis.</li>
-                <li>Achieved an F1-score of 0.76 for predicting price increases.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>Shifter (C, C++)</h3>
-            <ul>
-                <li><a href="https://store.steampowered.com/app/3091540/Shifter/" target="_blank">View on Steam</a></li>
-                <li>Developed a published 2D platformer on Steam with a unique puzzle-solving mechanic.</li>
-                <li>Designed a core engine system including sound, UI, and game progress-saving features.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <h3>Sky Slinger (C, C++)</h3>
-            <ul>
-                <li>Developed a 2D platformer game featuring a unique grappling mechanic for traversal. Designed levels, controls, and HUD to enhance gameplay.</li>
-            </ul>
+  <nav class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html">Khanh Nguyen</a>
+      <div class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="xfc.html">XFC Case Study</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
+  </nav>
 
-        <div class="project">
-            <h3>Caro - Five in a Roll (Python)</h3>
-            <ul>
-                <li>Implemented a Tic-Tac-Toe-inspired game using Q-Learning for an AI opponent.</li>
-                <li>Designed an interactive graphical user interface for seamless gameplay.</li>
-                <li><a href="https://github.com/thuykhanh2642/Caro-Five-in-a-roll" target="_blank">View on GitHub</a></li>
-            </ul>
-
-
-        <div class="project">
-            <h3>3D Printing and Car Maintenance</h3>
-            <ul>
-                <li>Utilized FDM/SLA printers to create household items and conducted DIY vehicle repairs, household items, etc.</li>
-            </ul>
+  <main class="wrap page">
+    <section class="hero reveal">
+      <div class="hero-grid">
+        <div class="card hero-copy">
+          <div class="eyebrow">CS student focused on machine learning and software systems</div>
+          <h1>I build reinforcement learning systems, ML applications, and game software.</h1>
+          <p class="lead">Computer Science student at DigiPen building RL systems, ML apps, and C/C++ game projects.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="projects.html">View Projects</a>
+            <a class="btn secondary" href="resume.html">Resume</a>
+          </div>
+          <div class="chips">
+            <span class="chip">PyTorch</span>
+            <span class="chip">Reinforcement Learning</span>
+            <span class="chip">Scikit-Learn</span>
+            <span class="chip">C/C++</span>
+            <span class="chip">Streamlit</span>
+          </div>
         </div>
 
+        <aside class="panel">
+          <div class="panel-top">
+            <h2 style="margin:0;font-size:1.08rem;">Quick Highlights</h2>
+            <span class="signal">AT A GLANCE</span>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-card">
+              <h3>RL Controller</h3>
+              <strong>XFC</strong>
+              <p class="muted">Built a hybrid PPO controller for the Kessler Game.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Training</h3>
+              <strong>50%</strong>
+              <p class="muted">Reduced training time while maintaining controller performance.</p>
+            </div>
+            <div class="mini-card">
+              <h3>ML App</h3>
+              <strong>0.76 F1</strong>
+              <p class="muted">Stock movement classifier with time-aware feature engineering.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Game Release</h3>
+              <strong>Steam</strong>
+              <p class="muted">Published a puzzle platformer with production-facing systems.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: Java, Python, C/C++, SQL, HTML, CSS</li>
-            <li>Game Development: Unity</li>
-            <li>Developer Tools: Git, Visual Studio, IntelliJ, WSL, MySQL</li>
-            <li>Libraries: pandas, NumPy, Matplotlib, Seaborn, Scikit Learn</li>
-            <li>Core Knowledge: OOP, Data Structures, Algorithms, Machine Learning</li>
-        </ul>
+    <section class="section reveal">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>Featured Project</span>
+          <strong>XFC RL</strong>
+          <p class="muted">Hybrid fuzzy-logic and PPO controller for real-time spacecraft decision-making.</p>
+        </article>
+        <article class="stat-card">
+          <span>Measured Result</span>
+          <strong>50%</strong>
+          <p class="muted">Training-time reduction through PPO pipeline optimization and hybrid control design.</p>
+        </article>
+        <article class="stat-card">
+          <span>ML App</span>
+          <strong>0.76 F1</strong>
+          <p class="muted">Stock direction prediction with engineered features and time-aware validation.</p>
+        </article>
+        <article class="stat-card">
+          <span>Shipped Work</span>
+          <strong>Steam</strong>
+          <p class="muted">Published team game project with UI, audio, save flow, and optimization work.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="resume" class="section">
-        <h2>Resume</h2>
-        <p>Download my resume: <a href="KhanhNguyen_Resume.pdf" >Click Here</a></p>
-        <iframe src="KhanhNguyen_Resume.pdf" width="100%" height="600px"></iframe>
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">About</div>
+          <h2>Machine learning, reinforcement learning, and software systems.</h2>
+        </div>
+        <p>I like projects where the modeling and the software both matter.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <p>I'm a Computer Science student at DigiPen with a focus on machine learning. Most of my work sits somewhere between RL, predictive applications, and game software, and I like building the parts around the core idea that make a project usable.</p>
+        </article>
+        <aside class="card">
+          <ul class="list">
+            <li><strong>What I focus on</strong>Reinforcement learning, ML pipelines, and interactive software systems.</li>
+            <li><strong>What I enjoy building</strong>Projects where modeling, engineering, and user-facing behavior all matter.</li>
+            <li><strong>What I am looking for</strong>ML, software engineering, and technical project opportunities where I can keep shipping real systems.</li>
+          </ul>
+        </aside>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kyle.nguyen@digipen.edu">kyle.nguyen@digipen.edu</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/khanh-nguyen-468631223" target="_blank">linkedin.com/in/khanh-nguyen</a></p>
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Featured Project</div>
+          <h2>Featured reinforcement learning work.</h2>
+        </div>
+        <p>A hybrid RL controller built around coordinated control, training efficiency, and scenario-aware behavior.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card featured-card">
+          <div class="label">Featured Work</div>
+          <h3>Hybrid RL controller for Kessler Game</h3>
+          <p class="sub">Built a hybrid control system that combines Sugeno-type fuzzy logic with PPO reinforcement learning, using a shared-trunk policy to coordinate movement and combat decisions in a single forward pass.</p>
+          <div class="tags" style="margin-top:18px;">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">PPO + GAE</span>
+            <span class="tag">Fuzzy Logic</span>
+          </div>
+          <ul class="list" style="margin-top:22px;">
+            <li><strong>Shared-trunk policy</strong>Unified thrust, turning, firing, and mine actions to improve coordination across control tasks.</li>
+            <li><strong>50% faster training</strong>Used GAE, mini-batch updates, and KL-based stopping to cut training time while maintaining performance.</li>
+            <li><strong>Scenario-conditioned policy</strong>Improved decision quality with time-to-collision, relative velocity, and spatial prioritization signals.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="xfc.html">Read Case Study</a>
+            <a class="btn secondary" href="projects.html">All Projects</a>
+          </div>
+        </article>
+        <aside class="visual-card">
+          <div class="panel-top">
+            <h3 style="margin:0;font-size:1.05rem;">Architecture Snapshot</h3>
+            <span class="signal">SYSTEM VIEW</span>
+          </div>
+          <div class="diagram-row">
+            <div class="node"><strong>Scenario State</strong><p>TTC, velocity, proximity, and context features from the environment.</p></div>
+            <div class="node"><strong>Shared Trunk</strong><p>Common representation for movement and combat behavior.</p></div>
+            <div class="node"><strong>Action Heads</strong><p>Thrust, turn rate, fire, and mine outputs in one pass.</p></div>
+          </div>
+          <div class="connector"></div>
+          <div class="diagram-row">
+            <div class="node"><strong>Warm Start</strong><p>Behavior cloning stabilizes the starting policy.</p></div>
+            <div class="node"><strong>PPO Loop</strong><p>GAE, mini-batches, and KL early stopping improve efficiency.</p></div>
+            <div class="node"><strong>Hybrid Logic</strong><p>Heuristics support sample efficiency and consistent decision quality.</p></div>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Khanh Nguyen. All Rights Reserved.</p>
-        <p>
-            <a href="https://github.com/thuykhanh2642" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/khanh-nguyen-468631223" target="_blank">LinkedIn</a>
-        </p>
-    </footer>
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Selected Projects</div>
+          <h2>Selected projects.</h2>
+        </div>
+        <p>Other work includes ML application development and shipped game projects.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="card project-card">
+          <span class="date-pill">Sep 2024 - Sep 2025</span>
+          <h3>Stock Prediction Model</h3>
+          <p class="muted">Interactive Streamlit application for stock-trend prediction, training, and result visualization with time-aware ML workflows.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <ul>
+            <li>Engineered RSI, MACD, Bollinger bands, moving averages, and lag-based features.</li>
+            <li>Used TimeSeriesSplit plus randomized and grid search tuning.</li>
+            <li>Reached an F1-score of 0.76 on price-increase prediction.</li>
+          </ul>
+        </article>
+        <article class="card project-card">
+          <span class="date-pill">Feb 2024 - Aug 2024</span>
+          <h3>Shifter</h3>
+          <p class="muted">Published 2D portal-based puzzle platformer built with a three-person team and shipped to Steam.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Steam Release</span>
+          </div>
+          <ul>
+            <li>Implemented audio, settings, and progress-saving systems.</li>
+            <li>Built intuitive menus and gameplay UI.</li>
+            <li>Improved performance and fixed gameplay issues before release.</li>
+          </ul>
+        </article>
+        <article class="card project-card">
+          <span class="date-pill">Aug 2023 - Jan 2024</span>
+          <h3>Sky Slinger</h3>
+          <p class="muted">Team-built 2D platformer centered on a grappling mechanic, with gameplay and interface systems focused on responsiveness.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Gameplay Systems</span>
+          </div>
+          <ul>
+            <li>Implemented movement, level features, and animation systems.</li>
+            <li>Designed menus, level selection, and HUD flows.</li>
+            <li>Resolved gameplay issues and tuned mechanics for smoother play.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="actions" style="margin-top:22px;">
+        <a class="btn primary" href="projects.html">See All Projects</a>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Skills</div>
+          <h2>Skills and tools.</h2>
+        </div>
+        <p>Tools I use across ML, software, and game development.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Languages</h3>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <h3>ML / Data</h3>
+          <div class="chips">
+            <span class="chip">PyTorch</span><span class="chip">Scikit-Learn</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <h3>Developer Tools</h3>
+          <div class="chips">
+            <span class="chip">Git</span><span class="chip">Visual Studio</span><span class="chip">VS Code</span><span class="chip">IntelliJ</span><span class="chip">Conda</span><span class="chip">JupyterLab</span><span class="chip">Unity</span>
+          </div>
+        </article>
+        <article class="skill-card">
+          <h3>Knowledge</h3>
+          <div class="chips">
+            <span class="chip">Reinforcement Learning</span><span class="chip">ML Pipelines</span><span class="chip">Algorithms</span><span class="chip">Data Structures</span><span class="chip">OOP</span><span class="chip">Linux / WSL</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="cta-grid">
+        <article class="resume-card">
+          <div class="kicker">Resume</div>
+          <h3>Resume, experience, and project highlights.</h3>
+          <p class="muted">View a short summary or open the full PDF.</p>
+          <div class="actions" style="margin-top:22px;">
+            <a class="btn primary" href="resume.html">View Resume</a>
+            <a class="btn secondary" href="KhanhNguyen_Resume.pdf" download>Download PDF</a>
+          </div>
+        </article>
+        <article class="contact-card">
+          <div class="kicker">Contact</div>
+          <h3>Interested in ML, software engineering, or collaboration?</h3>
+          <p class="muted">Get in touch for ML, software, or collaboration opportunities.</p>
+          <div class="actions" style="margin-top:22px;">
+            <a class="btn primary" href="contact.html">Get In Touch</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>Khanh Nguyen</span>
+      <span id="year">2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

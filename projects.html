@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected machine learning, game, and software projects by Khanh Nguyen.">
+  <title>Projects | Khanh Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html">Khanh Nguyen</a>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="xfc.html">XFC Case Study</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap page">
+    <section class="page-hero reveal">
+      <div class="card page-hero-card">
+        <div class="kicker">Projects</div>
+        <h1>Projects in reinforcement learning, ML, and game software.</h1>
+        <p class="lead">Reinforcement learning, ML applications, and shipped game software.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Core Projects</div>
+          <h2>Featured projects.</h2>
+        </div>
+      </div>
+      <div class="projects-grid">
+        <article class="card project-card">
+          <span class="date-pill">Sep 2025 - Present</span>
+          <h3>RL Controller (XFC Competition)</h3>
+          <p class="muted">Hybrid spacecraft controller for the Kessler Game using fuzzy logic and PPO for real-time navigation and combat.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">Fuzzy Logic</span>
+          </div>
+          <ul>
+            <li>Built a shared-trunk policy that predicts thrust, turn rate, firing, and mine actions together.</li>
+            <li>Reduced PPO training time by 50% with GAE, KL early stopping, and tuned mini-batch updates.</li>
+            <li>Improved generalization with scenario-conditioned behavior and threat prioritization features.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="xfc.html">Read Case Study</a>
+            <a class="btn secondary" href="resume.html">Resume Entry</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Sep 2024 - Sep 2025</span>
+          <h3>Stock Prediction Model</h3>
+          <p class="muted">Streamlit application for stock-trend prediction, training, and visualization with time-aware model evaluation.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">yFinance</span>
+          </div>
+          <ul>
+            <li>Built a feature pipeline with RSI, MACD, Bollinger bands, moving averages, and lag features.</li>
+            <li>Used TimeSeriesSplit, RandomizedSearchCV, and GridSearchCV for realistic evaluation and tuning.</li>
+            <li>Achieved an F1-score of 0.76 for predicting price increases and 0.69 weighted F1 overall.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn secondary" href="https://github.com/thuykhanh2642" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Feb 2024 - Aug 2024</span>
+          <h3>Shifter</h3>
+          <p class="muted">Published 2D portal-based puzzle platformer built with a team of three.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Steam</span>
+          </div>
+          <ul>
+            <li>Designed and implemented audio, settings, and progress-saving systems.</li>
+            <li>Built usable menus and gameplay UI for smoother player interaction.</li>
+            <li>Improved performance through configurable graphics settings and targeted fixes.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://store.steampowered.com/app/3091540/Shifter/" target="_blank" rel="noopener noreferrer">View on Steam</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Aug 2023 - Jan 2024</span>
+          <h3>Sky Slinger</h3>
+          <p class="muted">2D platformer team project built around a grappling traversal mechanic.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Gameplay Systems</span>
+          </div>
+          <ul>
+            <li>Implemented player controls, level interactions, and animation systems.</li>
+            <li>Designed menus, level selection, and in-game HUD to support gameplay readability.</li>
+            <li>Resolved bugs and tuned mechanics for smoother traversal and pacing.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn secondary" href="https://github.com/thuykhanh2642" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Experiments & Interests</div>
+          <h2>Experiments and supporting work.</h2>
+        </div>
+        <p>Smaller experiments and hands-on technical interests.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card project-card">
+          <span class="date-pill">Experiment</span>
+          <h3>Caro: Five in a Row</h3>
+          <p class="muted">Early game AI project with a Q-learning opponent and a simple playable interface.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">Q-Learning</span>
+            <span class="tag">Game AI</span>
+          </div>
+          <ul>
+            <li>Implemented a Q-learning opponent rather than using a fixed scripted strategy.</li>
+            <li>Built a graphical interface for human-vs-AI play and experimentation.</li>
+            <li>Explored reinforcement learning ideas in a smaller, more self-contained setting.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/thuykhanh2642/Caro-Five-in-a-roll" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Beyond Coding</span>
+          <h3>Hands-on Engineering Interests</h3>
+          <p class="muted">3D printing and DIY repair are part of how I like to learn: build, troubleshoot, improve.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">3D Printing</span>
+            <span class="tag">DIY Repair</span>
+            <span class="tag">Problem Solving</span>
+          </div>
+          <ul>
+            <li>Use FDM and SLA printing for practical prototyping and iteration.</li>
+            <li>Approach maintenance and repair with the same debugging mindset as software.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>Khanh Nguyen</span>
+      <span id="year">2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

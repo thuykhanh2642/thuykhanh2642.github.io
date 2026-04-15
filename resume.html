@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume page for Khanh Nguyen with preview and PDF download.">
+  <title>Resume | Khanh Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html">Khanh Nguyen</a>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="xfc.html">XFC Case Study</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap page">
+    <section class="page-hero reveal">
+      <div class="card page-hero-card">
+        <div class="kicker">Resume</div>
+        <h1>Resume, experience, and project highlights.</h1>
+        <p class="lead">My resume covers reinforcement learning work, ML application development, software projects, and shipped team-based game work.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="KhanhNguyen_Resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+          <a class="btn secondary" href="KhanhNguyen_Resume.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>Strength</span>
+          <strong>RL Systems</strong>
+          <p class="muted">Hybrid control, PPO training, and scenario-aware decision making.</p>
+        </article>
+        <article class="stat-card">
+          <span>Strength</span>
+          <strong>ML Pipelines</strong>
+          <p class="muted">Feature engineering, evaluation workflows, and user-facing ML tools.</p>
+        </article>
+        <article class="stat-card">
+          <span>Strength</span>
+          <strong>Shipped Work</strong>
+          <p class="muted">Team-based game development with player-facing systems and release experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Preview</div>
+          <h2>Full resume.</h2>
+        </div>
+        <p>The PDF stays available directly on the site for recruiters, hiring managers, or collaborators who want the complete version.</p>
+      </div>
+      <div class="resume-card resume-frame">
+        <iframe src="KhanhNguyen_Resume.pdf" title="Khanh Nguyen Resume"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>Khanh Nguyen</span>
+      <span id="year">2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
