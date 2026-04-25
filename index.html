@@ -53,7 +53,7 @@
             <div class="mini-card">
               <h3>RL Controller</h3>
               <strong>XFC</strong>
-              <p class="muted">Built a hybrid PPO controller for the Kessler Game.</p>
+              <p class="muted">Built an RL controller for the Kessler Game simulation environment.</p>
             </div>
             <div class="mini-card">
               <h3>Training</h3>
@@ -68,7 +68,7 @@
             <div class="mini-card">
               <h3>Game Release</h3>
               <strong>Steam</strong>
-              <p class="muted">Published a puzzle platformer with production-facing systems.</p>
+              <p class="muted">Published a puzzle platformer with UI, save, and settings systems.</p>
             </div>
           </div>
         </aside>
@@ -104,19 +104,18 @@
       <div class="section-head">
         <div>
           <div class="kicker">About</div>
-          <h2>Most of my work sits somewhere between RL, ML apps, and games.</h2>
+          <h2>Computer Science student focused on machine learning and software.</h2>
         </div>
-        <p>I like projects where the modeling and the software both matter.</p>
       </div>
       <div class="grid-2">
         <article class="card">
-          <p>I'm a Computer Science student at DigiPen with a focus on machine learning. Most of my work sits somewhere between RL, predictive applications, and game software, and I like building the parts around the core idea that make a project usable.</p>
+          <p>I'm a Computer Science student at DigiPen with a focus on machine learning. My work has mostly been in reinforcement learning, ML applications, and technical software projects, and I enjoy building the surrounding systems that make those projects usable in practice.</p>
         </article>
         <aside class="card">
           <ul class="list">
-            <li><strong>What I focus on</strong>Reinforcement learning, ML pipelines, and interactive software systems.</li>
-            <li><strong>What I enjoy building</strong>Projects where modeling, engineering, and user-facing behavior all matter.</li>
-            <li><strong>What I am looking for</strong>ML, software engineering, and technical project opportunities where I can keep shipping real systems.</li>
+            <li><strong>Focus</strong>Reinforcement learning, machine learning, and software systems.</li>
+            <li><strong>Projects</strong>Controllers, ML tools, APIs, and interactive applications.</li>
+            <li><strong>Interest</strong>Projects that involve both modeling and engineering.</li>
           </ul>
         </aside>
       </div>
@@ -128,13 +127,13 @@
           <div class="kicker">Featured Project</div>
           <h2>Recent RL work.</h2>
         </div>
-        <p>A hybrid RL controller built around coordinated control, training efficiency, and scenario-aware behavior.</p>
+        <p>RL controller work focused on training efficiency and control design.</p>
       </div>
       <div class="grid-2">
         <article class="card featured-card">
           <div class="label">Featured Work</div>
-          <h3>Hybrid RL controller for Kessler Game</h3>
-          <p class="sub">Built a hybrid control system that combines Sugeno-type fuzzy logic with PPO reinforcement learning, using a shared-trunk policy to coordinate movement and combat decisions in a single forward pass.</p>
+          <h3>RL controller for the Kessler Game simulation environment</h3>
+          <p class="sub">Built a hybrid controller that combines Sugeno-type fuzzy logic, PPO, scenario conditioning, and staged training across multiple scenario groups.</p>
           <div class="tags" style="margin-top:18px;">
             <span class="tag">Python</span>
             <span class="tag">PyTorch</span>
@@ -142,9 +141,9 @@
             <span class="tag">Fuzzy Logic</span>
           </div>
           <ul class="list" style="margin-top:22px;">
-            <li><strong>Shared-trunk policy</strong>Unified thrust, turning, firing, and mine actions to improve coordination across control tasks.</li>
+            <li><strong>Staged training</strong>Used foundation, motion, pressure, and full scenario groups to build the controller progressively.</li>
             <li><strong>50% faster training</strong>Used GAE, mini-batch updates, and KL-based stopping to cut training time while maintaining performance.</li>
-            <li><strong>Scenario-conditioned policy</strong>Improved decision quality with time-to-collision, relative velocity, and spatial prioritization signals.</li>
+            <li><strong>Context inputs</strong>Used time-to-collision, relative velocity, and spatial signals to improve control decisions.</li>
           </ul>
           <div class="actions">
             <a class="btn primary" href="xfc.html">Read Case Study</a>
@@ -158,14 +157,14 @@
           </div>
           <div class="diagram-row">
             <div class="node"><strong>Scenario State</strong><p>TTC, velocity, proximity, and context features from the environment.</p></div>
-            <div class="node"><strong>Shared Trunk</strong><p>Common representation for movement and combat behavior.</p></div>
-            <div class="node"><strong>Action Heads</strong><p>Thrust, turn rate, fire, and mine outputs in one pass.</p></div>
+            <div class="node"><strong>Fuzzy Policy</strong><p>Sugeno-based maneuver policy for thrust and turn decisions.</p></div>
+            <div class="node"><strong>Scenario Bias</strong><p>Scenario-conditioned offsets adapt the policy across encounter types.</p></div>
           </div>
           <div class="connector"></div>
           <div class="diagram-row">
             <div class="node"><strong>Warm Start</strong><p>Behavior cloning stabilizes the starting policy.</p></div>
             <div class="node"><strong>PPO Loop</strong><p>GAE, mini-batches, and KL early stopping improve efficiency.</p></div>
-            <div class="node"><strong>Hybrid Logic</strong><p>Heuristics support sample efficiency and consistent decision quality.</p></div>
+            <div class="node"><strong>Hybrid Control</strong><p>Learned maneuvering stays paired with structured combat logic.</p></div>
           </div>
         </aside>
       </div>
@@ -177,7 +176,7 @@
           <div class="kicker">Selected Projects</div>
           <h2>Other projects.</h2>
         </div>
-        <p>Other work includes ML application development and shipped game projects.</p>
+        <p>Other work includes ML applications, software tools, and shipped game projects.</p>
       </div>
       <div class="projects-grid">
         <article class="card project-card">
@@ -196,33 +195,33 @@
           </ul>
         </article>
         <article class="card project-card">
-          <span class="date-pill">Feb 2024 - Aug 2024</span>
-          <h3>Shifter</h3>
-          <p class="muted">Published 2D portal-based puzzle platformer built with a three-person team and shipped to Steam.</p>
+          <span class="date-pill">Mar 2026 - Apr 2026</span>
+          <h3>Task Parser Assistant</h3>
+          <p class="muted">Natural-language task parser with a FastAPI backend and Chrome extension reminder flow.</p>
           <div class="tags" style="margin:18px 0;">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Steam Release</span>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Chrome Extension</span>
           </div>
           <ul>
-            <li>Implemented audio, settings, and progress-saving systems.</li>
-            <li>Built intuitive menus and gameplay UI.</li>
-            <li>Improved performance and fixed gameplay issues before release.</li>
+            <li>Parsed task text into structured fields like command, date, time, people, and location.</li>
+            <li>Built a FastAPI service and Manifest V3 extension for local reminder scheduling.</li>
+            <li>Added automated tests for preprocessing, parsing, and API behavior.</li>
           </ul>
         </article>
         <article class="card project-card">
-          <span class="date-pill">Aug 2023 - Jan 2024</span>
-          <h3>Sky Slinger</h3>
-          <p class="muted">Team-built 2D platformer centered on a grappling mechanic, with gameplay and interface systems focused on responsiveness.</p>
+          <span class="date-pill">Nov 2025 - Dec 2025</span>
+          <h3>ZeroDCE Low-Light Enhancement</h3>
+          <p class="muted">Low-light image enhancement project built around Zero-Reference Deep Curve Estimation.</p>
           <div class="tags" style="margin:18px 0;">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Gameplay Systems</span>
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Computer Vision</span>
           </div>
           <ul>
-            <li>Implemented movement, level features, and animation systems.</li>
-            <li>Designed menus, level selection, and HUD flows.</li>
-            <li>Resolved gameplay issues and tuned mechanics for smoother play.</li>
+            <li>Implemented a reduced ZeroDCE variant with a smaller model footprint than the original DCE-Net.</li>
+            <li>Trained with exposure, color constancy, illumination smoothness, and spatial consistency losses.</li>
+            <li>Added CLI inference and real-time webcam enhancement for side-by-side output.</li>
           </ul>
         </article>
       </div>
@@ -271,8 +270,7 @@
       <div class="cta-grid">
         <article class="resume-card">
           <div class="kicker">Resume</div>
-          <h3>Resume and background.</h3>
-          <p class="muted">View a short summary or open the full PDF.</p>
+          <h3>Resume.</h3>
           <div class="actions" style="margin-top:22px;">
             <a class="btn primary" href="resume.html">View Resume</a>
             <a class="btn secondary" href="KhanhNguyen_Resume.pdf" download>Download PDF</a>

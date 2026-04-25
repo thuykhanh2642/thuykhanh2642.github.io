@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Case study for Khanh Nguyen's hybrid reinforcement learning controller for the Kessler Game.">
+  <meta name="description" content="Case study for Khanh Nguyen's reinforcement learning controller built for the Kessler Game environment used in the Explainable Fuzzy Competition.">
   <title>XFC Case Study | Khanh Nguyen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +26,21 @@
 
   <main class="wrap page">
     <section class="page-hero reveal">
-      <div class="card page-hero-card">
-        <div class="kicker">Case Study</div>
-        <h1>Hybrid RL controller for Kessler Game.</h1>
-        <p class="lead">Hybrid controller for the Kessler Game combining Sugeno-type fuzzy logic, PPO, and a shared-trunk policy for real-time control.</p>
-        <div class="btn-row">
-          <a class="btn primary" href="projects.html">Back to Projects</a>
-          <a class="btn secondary" href="resume.html">See Resume</a>
+      <div class="case-grid">
+        <div class="card page-hero-card">
+          <div class="kicker">Case Study</div>
+          <h1>Hybrid RL controller for Kessler Game.</h1>
+          <p class="lead">Built for the Kessler Game environment used in the Explainable Fuzzy Competition, combining fuzzy logic, PPO, and staged training across multiple scenario groups.</p>
+          <div class="btn-row">
+            <a class="btn primary" href="projects.html">Back to Projects</a>
+            <a class="btn secondary" href="resume.html">See Resume</a>
+          </div>
         </div>
+        <aside class="card preview-card">
+          <a class="preview-frame preview-video" href="xfc/map2.gif" target="_blank" rel="noreferrer">
+            <img src="xfc/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
+          </a>
+        </aside>
       </div>
     </section>
 
@@ -45,9 +52,9 @@
           <p class="muted">Combined fuzzy logic structure with PPO reinforcement learning.</p>
         </article>
         <article class="stat-card">
-          <span>Policy Design</span>
-          <strong>Shared Trunk</strong>
-          <p class="muted">One model coordinated navigation and combat actions together.</p>
+          <span>Training Setup</span>
+          <strong>Staged</strong>
+          <p class="muted">Used foundation, motion, pressure, and full scenario groups during training.</p>
         </article>
         <article class="stat-card">
           <span>Training Result</span>
@@ -66,26 +73,69 @@
       <div class="section-head">
         <div>
           <div class="kicker">Visual Proof</div>
-          <h2>Space for screenshots, charts, and diagrams.</h2>
+          <h2>Charts, diagrams, and run output.</h2>
         </div>
-        <p>These slots are ready for a controller diagram, training curve, or gameplay capture when you add assets.</p>
       </div>
-      <div class="media-grid">
-        <article class="media-slot">
-          <span>Diagram</span>
-          <strong>Controller architecture</strong>
-          <p>Use this space for a cleaner system diagram or policy layout graphic.</p>
-        </article>
-        <article class="media-slot">
-          <span>Chart</span>
-          <strong>Training result</strong>
-          <p>Drop in a reward curve, loss plot, or any chart that shows the training gains.</p>
-        </article>
-        <article class="media-slot">
-          <span>Screenshot</span>
-          <strong>Gameplay capture</strong>
-          <p>Add a Kessler Game frame that shows the controller working in context.</p>
-        </article>
+      <div class="proof-grid">
+        <figure class="card proof-card">
+          <a class="proof-frame" href="xfc/pipeline.png" target="_blank" rel="noreferrer">
+            <img src="xfc/pipeline.png" alt="Pipeline diagram for the XFC training setup.">
+          </a>
+          <figcaption class="proof-caption">
+            <strong>Training pipeline</strong>
+            End-to-end flow for the controller, training loop, and evaluation pass.
+          </figcaption>
+        </figure>
+        <div class="proof-stack">
+          <figure class="card proof-card">
+            <a class="proof-frame proof-frame-tall" href="xfc/ppo.gif" target="_blank" rel="noreferrer">
+              <img src="xfc/ppo.gif" alt="Animated XFC gameplay run using the PPO controller.">
+            </a>
+          </figure>
+          <figure class="card proof-card">
+            <a class="proof-frame proof-frame-tall" href="xfc/map2.gif" target="_blank" rel="noreferrer">
+              <img src="xfc/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
+            </a>
+          </figure>
+          <figure class="card proof-card">
+            <a class="proof-frame" href="xfc/full/trajectory_crossing_lanes.png" target="_blank" rel="noreferrer">
+              <img src="xfc/full/trajectory_crossing_lanes.png" alt="Crossing lanes trajectory plot from XFC evaluation.">
+            </a>
+            <figcaption class="proof-caption">
+              <strong>Trajectory view</strong>
+              Evaluation path from the crossing lanes scenario.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="proof-grid proof-grid-charts">
+        <figure class="card proof-card">
+          <a class="proof-frame" href="xfc/full/training_reward_curve.png" target="_blank" rel="noreferrer">
+            <img src="xfc/full/training_reward_curve.png" alt="Training reward curve for the XFC controller.">
+          </a>
+          <figcaption class="proof-caption">
+            <strong>Training reward curve</strong>
+            Reward trend from the full training run.
+          </figcaption>
+          <div class="proof-metrics">
+            <span class="proof-metric">Train Avg: 316.7</span>
+            <span class="proof-metric">All Avg: 288.3</span>
+          </div>
+        </figure>
+        <figure class="card proof-card">
+          <a class="proof-frame" href="xfc/full/scenario_performance_best.png" target="_blank" rel="noreferrer">
+            <img src="xfc/full/scenario_performance_best.png" alt="Scenario performance bar chart for the XFC controller.">
+          </a>
+          <figcaption class="proof-caption">
+            <strong>Scenario performance</strong>
+            Scenario-by-scenario reward results from the strongest run.
+          </figcaption>
+          <div class="proof-metrics">
+            <span class="proof-metric">crossing_lanes: 935</span>
+            <span class="proof-metric">Hits: 363</span>
+            <span class="proof-metric">Deaths: 24</span>
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -117,29 +167,28 @@
           <div class="kicker">Approach</div>
           <h2>Hybrid control for stability and speed.</h2>
         </div>
-        <p>The hybrid design gave the policy a stronger starting point and better sample efficiency than a blank-slate PPO setup.</p>
       </div>
       <div class="case-grid">
         <article class="card architecture-card">
           <h3>System Design</h3>
           <div class="diagram-row" style="margin-top:18px;">
             <div class="node"><strong>Input State</strong><p>Scenario context, relative velocity, TTC, and spatial features.</p></div>
-            <div class="node"><strong>Shared Trunk</strong><p>Common representation across control and action decisions.</p></div>
-            <div class="node"><strong>Output Heads</strong><p>Thrust, turn rate, fire, and mine predictions together.</p></div>
+            <div class="node"><strong>Fuzzy Policy</strong><p>Sugeno-based maneuver policy for thrust and turn decisions.</p></div>
+            <div class="node"><strong>Scenario Bias</strong><p>Scenario-conditioned offsets adapt the policy across encounter types.</p></div>
           </div>
           <div class="connector" style="margin:16px 0;"></div>
           <div class="diagram-row">
             <div class="node"><strong>Warm Start</strong><p>Behavior-cloning initialization improved early stability.</p></div>
             <div class="node"><strong>PPO Loop</strong><p>GAE and KL early stopping improved training efficiency.</p></div>
-            <div class="node"><strong>Hybrid Rules</strong><p>Fuzzy logic supported stable behavior and decision quality.</p></div>
+            <div class="node"><strong>Hybrid Control</strong><p>Learned maneuvering stayed paired with structured combat logic.</p></div>
           </div>
         </article>
         <aside class="timeline-card">
           <h3>Why this design</h3>
           <ul class="list">
-            <li><strong>Shared-trunk policy</strong>One learned representation supported all control outputs.</li>
-            <li><strong>Behavior-cloning warm start</strong>Improved the initial policy and early training stability.</li>
-            <li><strong>Hybrid control logic</strong>Balanced learned adaptation with structured heuristics.</li>
+            <li><strong>Warm-started policy</strong>Started PPO from a pretrained maneuver controller instead of a cold start.</li>
+            <li><strong>Scenario-conditioned policy</strong>Added small scenario-specific biases without discarding the fuzzy base model.</li>
+            <li><strong>Hybrid control split</strong>Kept learned maneuvering and structured combat logic in a practical setup.</li>
           </ul>
         </aside>
       </div>
@@ -149,26 +198,25 @@
       <div class="section-head">
         <div>
           <div class="kicker">Training Pipeline</div>
-          <h2>Training pipeline.</h2>
+          <h2>How the controller was trained.</h2>
         </div>
-        <p>The training-time reduction came from several decisions working together.</p>
       </div>
       <div class="timeline">
         <div class="timeline-step">
-          <h3>1. Generalized Advantage Estimation</h3>
-          <p class="muted">Used GAE to stabilize updates and improve the bias-variance tradeoff.</p>
+          <h3>1. Warm start</h3>
+          <p class="muted">Initialized PPO from the pretrained maneuver bundle instead of training from scratch.</p>
         </div>
         <div class="timeline-step">
-          <h3>2. Mini-batch PPO updates</h3>
-          <p class="muted">Structured the PPO loop for more efficient training and steadier learning.</p>
+          <h3>2. Foundation stage</h3>
+          <p class="muted">Started with readable scenarios like stock, donut ring, and vertical wall to stabilize core movement behavior.</p>
         </div>
         <div class="timeline-step">
-          <h3>3. KL-divergence early stopping</h3>
-          <p class="muted">Limited aggressive policy drift and improved training stability.</p>
+          <h3>3. Motion and pressure stages</h3>
+          <p class="muted">Expanded into harder scenario groups to train crossing behavior, denser asteroid motion, and pressure handling.</p>
         </div>
         <div class="timeline-step">
-          <h3>4. Scenario-conditioned signals</h3>
-          <p class="muted">Used time-to-collision, relative velocity, and proximity to improve prioritization.</p>
+          <h3>4. PPO updates with scenario context</h3>
+          <p class="muted">Used GAE, mini-batch PPO, KL-based early stopping, and context inputs during the full run.</p>
         </div>
       </div>
     </section>
@@ -177,9 +225,8 @@
       <div class="section-head">
         <div>
           <div class="kicker">Results</div>
-          <h2>Results.</h2>
+          <h2>What improved.</h2>
         </div>
-        <p>The controller improved training efficiency while preserving coordinated navigation and combat behavior.</p>
       </div>
       <div class="grid-3">
         <article class="stat-card">
@@ -188,14 +235,14 @@
           <p class="muted">Training-time reduction while maintaining controller quality.</p>
         </article>
         <article class="stat-card">
-          <span>Architecture</span>
-          <strong>1 Pass</strong>
-          <p class="muted">Movement and combat actions predicted together in a single forward pass.</p>
+          <span>Curriculum</span>
+          <strong>4 Stages</strong>
+          <p class="muted">Foundation, motion, pressure, and full scenario groups shaped the training run.</p>
         </article>
         <article class="stat-card">
           <span>Behavior</span>
-          <strong>Scenario-Aware</strong>
-          <p class="muted">Threat prioritization and reward shaping improved decision quality and generalization.</p>
+          <strong>More Stable</strong>
+          <p class="muted">Threat prioritization and reward shaping improved consistency across scenarios.</p>
         </article>
       </div>
     </section>
@@ -204,8 +251,8 @@
       <div class="grid-2">
         <article class="resume-card">
           <div class="kicker">Takeaway</div>
-          <h3>Why this one stands out</h3>
-          <p class="muted">This is the kind of work I want to keep doing: RL systems with real engineering tradeoffs and measurable gains.</p>
+          <h3>Project summary</h3>
+          <p class="muted">This project combined reinforcement learning, fuzzy control, and staged scenario training into one controller, with measurable gains in training efficiency.</p>
         </article>
         <article class="contact-card">
           <div class="kicker">Next Step</div>

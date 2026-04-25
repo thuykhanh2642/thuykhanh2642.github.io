@@ -28,8 +28,7 @@
     <section class="page-hero reveal">
       <div class="card page-hero-card">
         <div class="kicker">Projects</div>
-        <h1>Projects in reinforcement learning, ML, and game software.</h1>
-        <p class="lead">Reinforcement learning, ML applications, and shipped game software.</p>
+        <h1>Projects in reinforcement learning, machine learning, and games.</h1>
       </div>
     </section>
 
@@ -44,7 +43,7 @@
         <article class="card project-card">
           <span class="date-pill">Sep 2025 - Present</span>
           <h3>RL Controller (XFC Competition)</h3>
-          <p class="muted">Hybrid spacecraft controller for the Kessler Game using fuzzy logic and PPO for real-time navigation and combat.</p>
+          <p class="muted">RL controller for the Kessler Game simulation environment, built with fuzzy logic and PPO.</p>
           <div class="tags" style="margin:18px 0;">
             <span class="tag">Python</span>
             <span class="tag">PyTorch</span>
@@ -52,13 +51,12 @@
             <span class="tag">Fuzzy Logic</span>
           </div>
           <ul>
-            <li>Built a shared-trunk policy that predicts thrust, turn rate, firing, and mine actions together.</li>
+            <li>Used staged training across foundation, motion, pressure, and full scenario groups.</li>
             <li>Reduced PPO training time by 50% with GAE, KL early stopping, and tuned mini-batch updates.</li>
-            <li>Improved generalization with scenario-conditioned behavior and threat prioritization features.</li>
+            <li>Improved generalization with context inputs and threat prioritization features.</li>
           </ul>
           <div class="actions">
             <a class="btn primary" href="xfc.html">Read Case Study</a>
-            <a class="btn secondary" href="resume.html">Resume Entry</a>
           </div>
         </article>
 
@@ -78,14 +76,53 @@
             <li>Achieved an F1-score of 0.76 for predicting price increases and 0.69 weighted F1 overall.</li>
           </ul>
           <div class="actions">
+            <a class="btn primary" href="stock.html">View Preview</a>
             <a class="btn secondary" href="https://github.com/thuykhanh2642" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Mar 2026 - Apr 2026</span>
+          <h3>Task Parser Assistant</h3>
+          <p class="muted">Natural-language task parser with a FastAPI backend and Chrome extension reminder workflow.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Chrome Extension</span>
+          </div>
+          <ul>
+            <li>Parsed task text into structured fields including command, date, time, people, and location.</li>
+            <li>Built a FastAPI service with `/parse` and `/health` endpoints for local integration.</li>
+            <li>Added a Manifest V3 extension that schedules browser-local reminders with `chrome.alarms` and notifications.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/thuykhanh2642/Task-Parser-Assistant" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="date-pill">Nov 2025 - Dec 2025</span>
+          <h3>ZeroDCE Low-Light Enhancement</h3>
+          <p class="muted">Low-light image enhancement project centered on Zero-Reference Deep Curve Estimation.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+          <ul>
+            <li>Implemented a reduced 8-stage ZeroDCE model with 17,080 parameters, versus 79,416 in the original DCE-Net.</li>
+            <li>Trained the model with exposure control, color constancy, illumination smoothness, and spatial consistency losses.</li>
+            <li>Added image inference and real-time webcam enhancement for side-by-side comparison.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/wethan2/CS-570-Project" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
 
         <article class="card project-card">
           <span class="date-pill">Feb 2024 - Aug 2024</span>
           <h3>Shifter</h3>
-          <p class="muted">Published 2D portal-based puzzle platformer built with a team of three.</p>
+          <p class="muted">Published 2D puzzle platformer built around portals, light-and-dark world shifting, and atmospheric exploration.</p>
           <div class="tags" style="margin:18px 0;">
             <span class="tag">C</span>
             <span class="tag">C++</span>
@@ -97,26 +134,8 @@
             <li>Improved performance through configurable graphics settings and targeted fixes.</li>
           </ul>
           <div class="actions">
+            <a class="btn secondary" href="shifter.html">View Preview</a>
             <a class="btn primary" href="https://store.steampowered.com/app/3091540/Shifter/" target="_blank" rel="noopener noreferrer">View on Steam</a>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <span class="date-pill">Aug 2023 - Jan 2024</span>
-          <h3>Sky Slinger</h3>
-          <p class="muted">2D platformer team project built around a grappling traversal mechanic.</p>
-          <div class="tags" style="margin:18px 0;">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Gameplay Systems</span>
-          </div>
-          <ul>
-            <li>Implemented player controls, level interactions, and animation systems.</li>
-            <li>Designed menus, level selection, and in-game HUD to support gameplay readability.</li>
-            <li>Resolved bugs and tuned mechanics for smoother traversal and pacing.</li>
-          </ul>
-          <div class="actions">
-            <a class="btn secondary" href="https://github.com/thuykhanh2642" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
           </div>
         </article>
       </div>
@@ -141,9 +160,9 @@
             <span class="tag">Game AI</span>
           </div>
           <ul>
-            <li>Implemented a Q-learning opponent rather than using a fixed scripted strategy.</li>
-            <li>Built a graphical interface for human-vs-AI play and experimentation.</li>
-            <li>Explored reinforcement learning ideas in a smaller, more self-contained setting.</li>
+            <li>Implemented a Q-learning agent for move selection.</li>
+            <li>Built a playable GUI for human-versus-agent testing.</li>
+            <li>Used it to prototype RL behavior in a small board-game setting.</li>
           </ul>
           <div class="actions">
             <a class="btn primary" href="https://github.com/thuykhanh2642/Caro-Five-in-a-roll" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -151,9 +170,28 @@
         </article>
 
         <article class="card project-card">
+          <span class="date-pill">Aug 2023 - Jan 2024</span>
+          <h3>Sky Slinger</h3>
+          <p class="muted">2D platformer team project built around a grappling traversal mechanic.</p>
+          <div class="tags" style="margin:18px 0;">
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Gameplay Systems</span>
+          </div>
+          <ul>
+            <li>Implemented player controls, level interactions, and animation systems.</li>
+            <li>Designed menus, level selection, and in-game HUD to support gameplay readability.</li>
+            <li>Resolved bugs and tuned mechanics for smoother traversal and pacing.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn secondary" href="https://github.com/thuykhanh2642" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
           <span class="date-pill">Beyond Coding</span>
           <h3>Hands-on Engineering Interests</h3>
-          <p class="muted">3D printing and DIY repair are part of how I like to learn: build, troubleshoot, improve.</p>
+          <p class="muted">Outside of code, I like making things, taking them apart, and figuring out how to get them working again.</p>
           <div class="tags" style="margin:18px 0;">
             <span class="tag">3D Printing</span>
             <span class="tag">DIY Repair</span>
@@ -161,44 +199,12 @@
           </div>
           <ul>
             <li>Use FDM and SLA printing for practical prototyping and iteration.</li>
-            <li>Approach maintenance and repair with the same debugging mindset as software.</li>
+            <li>Spend time fixing and tinkering with things just because I like understanding how they work.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Stock App Preview</div>
-          <h2>Interface screenshots.</h2>
-        </div>
-        <p>A quick look at the Streamlit app flow, charts, and output screens.</p>
-      </div>
-      <div class="image-grid">
-        <figure class="card image-card">
-          <a class="image-frame" href="screenshot1.png" target="_blank" rel="noopener noreferrer">
-            <img src="screenshot1.png" alt="Stock dashboard view showing a Google dataset selection, summary cards, and a price history chart.">
-          </a>
-          <figcaption class="image-caption"><strong>Dashboard</strong>Dataset selection, summary cards, chart view, and model controls.</figcaption>
-        </figure>
-        <figure class="card image-card">
-          <a class="image-frame" href="screenshot2.png" target="_blank" rel="noopener noreferrer">
-            <img src="screenshot2.png" alt="Forecast view showing next trading day outlook, metrics, a prediction timeline, and a confusion matrix.">
-          </a>
-          <figcaption class="image-caption"><strong>Forecast</strong>Holdout metrics, prediction timeline, and confusion matrix from the app.</figcaption>
-        </figure>
-        <figure class="card image-card">
-          <a class="image-frame" href="screenshot3.png" target="_blank" rel="noopener noreferrer">
-            <img src="screenshot3.png" alt="Classification report output showing precision, recall, F1-score, and accuracy values.">
-          </a>
-          <figcaption class="image-caption"><strong>Report output</strong>Classification report screen from a placeholder/demo run of the interface.</figcaption>
-        </figure>
-      </div>
-      <div class="note-card" style="margin-top:18px;">
-        These screenshots are from a placeholder/demo run of the interface, so the numbers shown here are mainly for UI preview. The project description above is a better summary of the actual model work and evaluation process.
-      </div>
-    </section>
   </main>
 
   <footer>
