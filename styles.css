@@ -544,6 +544,10 @@ h1{
 .timeline-step h3{margin-bottom:8px}
 .skill-card h3,.resume-card h3,.contact-card h3,.timeline-card h3{margin-bottom:14px}
 .resume-frame{padding:0;overflow:hidden}
+.mobile-only{display:none}
+.mobile-resume-note{
+  text-align:center;
+}
 iframe{
   width:100%;
   height:760px;
@@ -572,10 +576,30 @@ footer{padding:10px 0 52px;color:var(--muted)}
   iframe{height:560px}
 }
 @media (max-width:720px){
+  .page{padding:24px 0 42px}
+  .section{padding:24px 0}
   .topbar .wrap,.section-head{display:block}
   .brand{display:inline-block;margin-bottom:12px}
+  .nav{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding-bottom:4px;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{flex:0 0 auto}
   .card,.panel,.stat-card,.skill-card,.resume-card,.contact-card,.timeline-card,.featured-card,.visual-card,.architecture-card,.page-hero-card{padding:22px}
   .mini-grid,.diagram-row{grid-template-columns:1fr}
   h1{max-width:none}
+  .btn-row{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .btn{
+    width:100%;
+  }
+  .resume-frame{display:none}
+  .mobile-only{display:block}
   iframe{height:460px}
 }
