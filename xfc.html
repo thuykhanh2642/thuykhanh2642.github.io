@@ -26,7 +26,7 @@
 
   <main class="wrap page">
     <section class="page-hero reveal">
-      <div class="case-grid">
+      <div class="case-grid case-hero-grid">
         <div class="card page-hero-card">
           <div class="kicker">Case Study</div>
           <h1>Hybrid RL controller for Kessler Game.</h1>
@@ -36,7 +36,7 @@
             <a class="btn secondary" href="resume.html">See Resume</a>
           </div>
         </div>
-        <aside class="card preview-card">
+        <aside class="card preview-card hero-preview-card">
           <a class="preview-frame preview-video" href="xfc/map2.gif" target="_blank" rel="noreferrer">
             <img src="xfc/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
           </a>
@@ -158,6 +158,34 @@
             <li><strong>Generalization pressure</strong>The controller needs scenario awareness instead of brittle one-off behavior.</li>
           </ul>
         </aside>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Earlier Approaches</div>
+          <h2>How the controller evolved.</h2>
+        </div>
+        <p>The final PPO setup came after a few simpler versions that made the tradeoffs clearer.</p>
+      </div>
+      <div class="evolution-grid">
+        <article class="card evolution-card">
+          <h3>Hybrid fuzzy controller</h3>
+          <p>Easy to inspect, but still tied to hand-tuned rules and harder to adapt across scenarios.</p>
+        </article>
+        <article class="card evolution-card">
+          <h3>Actor-critic variants</h3>
+          <p>The early fuzzy actor-critic versions were either too slow in practice or too limited to learn reliably.</p>
+        </article>
+        <article class="card evolution-card">
+          <h3>Behavior cloning + DAgger</h3>
+          <p>Useful as a warm start, but still capped by the expert policy and not enough on its own.</p>
+        </article>
+        <article class="card evolution-card">
+          <h3>PPO</h3>
+          <p>Clipped updates were more stable, and the later shared maneuver policy became the final direction.</p>
+        </article>
       </div>
     </section>
 

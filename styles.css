@@ -258,6 +258,21 @@ h1{
 .page-hero-card{padding:34px}
 .page-hero-card h1{max-width:14ch;margin-bottom:16px}
 .page-hero-card p{max-width:60ch}
+.case-hero-grid{
+  align-items:start;
+}
+.hero-preview-card{
+  align-self:start;
+}
+.hero-preview-card .preview-frame{
+  padding:16px;
+}
+.hero-preview-card .preview-video{
+  aspect-ratio:4 / 3;
+}
+.hero-preview-card .preview-video img{
+  object-fit:cover;
+}
 .project-card{
   display:flex;
   flex-direction:column;
@@ -506,6 +521,20 @@ h1{
   border:1px solid rgba(134,232,255,.14);
 }
 .timeline{display:grid;gap:16px}
+.evolution-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.evolution-card{
+  padding:24px 26px;
+}
+.evolution-card h3{
+  margin-bottom:10px;
+}
+.evolution-card p{
+  color:var(--muted);
+}
 .timeline-step{
   padding:18px;
   border-radius:18px;
@@ -538,7 +567,7 @@ footer{padding:10px 0 52px;color:var(--muted)}
 .reveal.visible{opacity:1;transform:none}
 @media (max-width:980px){
   .hero{min-height:auto;padding-top:28px}
-  .hero-grid,.grid-2,.cta-grid,.resume-grid,.contact-grid,.case-grid,.stats-grid,.projects-grid,.skills-grid,.grid-3{grid-template-columns:1fr}
+  .hero-grid,.grid-2,.cta-grid,.resume-grid,.contact-grid,.case-grid,.stats-grid,.projects-grid,.skills-grid,.grid-3,.evolution-grid{grid-template-columns:1fr}
   .media-grid,.image-grid,.proof-grid,.proof-grid-charts,.preview-grid,.steam-shot-grid{grid-template-columns:1fr}
   iframe{height:560px}
 }
