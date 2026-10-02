@@ -38,43 +38,45 @@
 
   <main class="wrap page ask-page">
     <section class="ask-intro" aria-labelledby="ask-title">
-      <div>
-        <h1 id="ask-title">Ask about my work.</h1>
-        <p>Questions about projects, tools, or technical decisions are answered from this portfolio and resume.</p>
+      <h1 id="ask-title">Ask about my work.</h1>
+      <div class="ask-intro-copy">
+        <p>Ask about a project, the tools I used, or how something was built.</p>
+        <p class="ask-disclosure">Answers use Gemini and information from this site. Do not include private information.</p>
       </div>
-      <p class="ask-disclosure">This guide uses Gemini and only knows what is on this site. Do not include private information.</p>
     </section>
 
-    <div class="ask-layout">
+    <section class="ask-workspace" aria-label="Ask about Khanh's portfolio">
+      <div class="ask-tools">
+        <div class="ask-suggestions">
+          <span>Suggested questions</span>
+          <div class="ask-prompts">
+            <button type="button" class="ask-prompt" data-question="What did Khanh build for the XFC competition?">XFC controller</button>
+            <button type="button" class="ask-prompt" data-question="How was the stock prediction model evaluated?">Stock model</button>
+            <button type="button" class="ask-prompt" data-question="What does the ZeroDCE project do?">ZeroDCE</button>
+            <button type="button" class="ask-prompt" data-question="Which games has Khanh worked on?">Games</button>
+          </div>
+        </div>
+        <a class="ask-contact-link" href="contact.html">Contact me directly</a>
+      </div>
+
       <section class="ask-chat" aria-label="Portfolio question and answer">
         <div class="ask-conversation" id="chat-log" aria-live="polite" aria-relevant="additions">
           <article class="ask-message" data-role="assistant">
             <span>Portfolio guide</span>
-            <p>Ask about the XFC controller, project stack, games, or anything covered here.</p>
+            <p>I can answer questions about the projects, technical decisions, and experience shown here.</p>
           </article>
         </div>
 
         <form class="ask-form" id="chat-form">
           <label for="chat-question">Your question</label>
-          <textarea id="chat-question" name="question" rows="3" maxlength="800" placeholder="What changed in the XFC controller over time?" required></textarea>
-          <div class="ask-form-actions">
-            <span id="chat-status" role="status" aria-live="polite"></span>
+          <div class="ask-composer">
+            <textarea id="chat-question" name="question" rows="2" maxlength="800" placeholder="What changed in the XFC controller over time?" required></textarea>
             <button class="btn primary" id="chat-submit" type="submit">Ask</button>
           </div>
+          <span class="ask-status" id="chat-status" role="status" aria-live="polite"></span>
         </form>
       </section>
-
-      <aside class="ask-rail" aria-label="Suggested questions">
-        <h2>Start with</h2>
-        <div class="ask-prompts">
-          <button type="button" class="ask-prompt" data-question="What did Khanh build for the XFC competition?">The XFC controller</button>
-          <button type="button" class="ask-prompt" data-question="How was the stock prediction model evaluated?">The stock model</button>
-          <button type="button" class="ask-prompt" data-question="What does the ZeroDCE project do?">ZeroDCE</button>
-          <button type="button" class="ask-prompt" data-question="Which games has Khanh worked on?">Games</button>
-        </div>
-        <a class="ask-contact-link" href="contact.html">Prefer to reach out directly?</a>
-      </aside>
-    </div>
+    </section>
   </main>
 
   <footer>

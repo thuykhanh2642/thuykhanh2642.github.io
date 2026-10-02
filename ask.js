@@ -9,6 +9,10 @@ const chatEndpoint = typeof window.PORTFOLIO_CHAT_ENDPOINT === "string"
   : "";
 const chatHistory = [];
 
+function scrollChat() {
+  chatLog.scrollTo({ top: chatLog.scrollHeight, behavior: "smooth" });
+}
+
 function addMessage(role, content) {
   const message = document.createElement("article");
   const label = document.createElement("span");
@@ -21,7 +25,31 @@ function addMessage(role, content) {
 
   message.append(label, body);
   chatLog.append(message);
-  message.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  scrollChat();
+}
+
+function addLoadingMessage() {
+  const message = document.createElement("article");
+  const label = document.createElement("span");
+  const indicator = document.createElement("div");
+
+  message.className = "ask-message";
+  message.dataset.role = "assistant";
+  label.textContent = "Portfolio guide";
+  indicator.className = "ask-typing";
+  indicator.setAttribute("role", "status");
+  indicator.setAttribute("aria-label", "Generating a response");
+
+  for (let index = 0; index < 3; index += 1) {
+    const dot = document.createElement("span");
+    dot.setAttribute("aria-hidden", "true");
+    indicator.append(dot);
+  }
+
+  message.append(label, indicator);
+  chatLog.append(message);
+  scrollChat();
+  return message;
 }
 
 function setLoading(isLoading) {
@@ -31,7 +59,6 @@ function setLoading(isLoading) {
   chatPrompts.forEach((prompt) => {
     prompt.disabled = isLoading;
   });
-  chatSubmit.textContent = isLoading ? "Thinking..." : "Ask";
 }
 
 function getErrorMessage(error) {
@@ -48,7 +75,7 @@ async function askQuestion(question, history) {
   }
 
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 25000);
+  const timeout = window.setTimeout(() => controller.abort(), 45000);
 
   try {
     const response = await fetch(chatEndpoint, {
@@ -85,12 +112,15 @@ async function submitQuestion(question) {
   chatQuestion.value = "";
   chatStatus.textContent = "";
   setLoading(true);
+  const loadingMessage = addLoadingMessage();
 
   try {
     const answer = await askQuestion(cleanQuestion, context);
+    loadingMessage.remove();
     addMessage("assistant", answer);
     chatHistory.push({ role: "assistant", content: answer });
   } catch (error) {
+    loadingMessage.remove();
     const message = getErrorMessage(error);
     addMessage("error", message);
     chatStatus.textContent = message;
