@@ -8,6 +8,20 @@ const chatEndpoint = typeof window.PORTFOLIO_CHAT_ENDPOINT === "string"
   ? window.PORTFOLIO_CHAT_ENDPOINT.trim()
   : "";
 const chatHistory = [];
+let conversationId;
+try {
+  conversationId = sessionStorage.getItem("portfolio-conversation-id");
+} catch {
+  // Chat still works when browser storage is disabled.
+}
+if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(conversationId || "")) {
+  conversationId = crypto.randomUUID();
+  try {
+    sessionStorage.setItem("portfolio-conversation-id", conversationId);
+  } catch {
+    // Keep the visit ID in memory for this page instead.
+  }
+}
 
 function scrollChat() {
   chatLog.scrollTo({ top: chatLog.scrollHeight, behavior: "smooth" });
@@ -81,7 +95,7 @@ async function askQuestion(question, history) {
     const response = await fetch(chatEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, history }),
+      body: JSON.stringify({ question, history, conversationId }),
       signal: controller.signal,
     });
     const payload = await response.json().catch(() => ({}));
