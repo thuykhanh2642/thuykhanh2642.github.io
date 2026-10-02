@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/index.js && node --check src/knowledge.js",
+    "check": "node --check src/index.js && node --check src/knowledge.js && node --check src/admin.js && node --check src/conversations.js && node --check src/request.js && node --check public/admin/admin.js",
+    "test": "node --test test/*.test.js",
+    "db:local": "wrangler d1 migrations apply CHAT_DB --local",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },

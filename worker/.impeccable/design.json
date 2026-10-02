@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T19:44:35.493Z",
+  "title": "Design System: Khanh Nguyen Conversations",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Forest Ink",
+        "canonical": "#101412",
+        "tonalRamp": [
+          "oklch(15% 0.0074 164.1)",
+          "oklch(26.4% 0.0074 164.1)",
+          "oklch(37.9% 0.0074 164.1)",
+          "oklch(49.3% 0.0074 164.1)",
+          "oklch(60.7% 0.0074 164.1)",
+          "oklch(72.1% 0.0074 164.1)",
+          "oklch(83.6% 0.0074 164.1)",
+          "oklch(95% 0.0074 164.1)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Forest Panel",
+        "canonical": "#18201a",
+        "tonalRamp": [
+          "oklch(15% 0.0163 152.6)",
+          "oklch(26.4% 0.0163 152.6)",
+          "oklch(37.9% 0.0163 152.6)",
+          "oklch(49.3% 0.0163 152.6)",
+          "oklch(60.7% 0.0163 152.6)",
+          "oklch(72.1% 0.0163 152.6)",
+          "oklch(83.6% 0.0163 152.6)",
+          "oklch(95% 0.0163 152.6)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f3f1e7",
+        "tonalRamp": [
+          "oklch(15% 0.0134 97.4)",
+          "oklch(26.4% 0.0134 97.4)",
+          "oklch(37.9% 0.0134 97.4)",
+          "oklch(49.3% 0.0134 97.4)",
+          "oklch(60.7% 0.0134 97.4)",
+          "oklch(72.1% 0.0134 97.4)",
+          "oklch(83.6% 0.0134 97.4)",
+          "oklch(95% 0.0134 97.4)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Sage",
+        "canonical": "#b3b7a8",
+        "tonalRamp": [
+          "oklch(15% 0.0213 119.0)",
+          "oklch(26.4% 0.0213 119.0)",
+          "oklch(37.9% 0.0213 119.0)",
+          "oklch(49.3% 0.0213 119.0)",
+          "oklch(60.7% 0.0213 119.0)",
+          "oklch(72.1% 0.0213 119.0)",
+          "oklch(83.6% 0.0213 119.0)",
+          "oklch(95% 0.0213 119.0)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Forest Rule",
+        "canonical": "#374238",
+        "tonalRamp": [
+          "oklch(15% 0.0223 147.6)",
+          "oklch(26.4% 0.0223 147.6)",
+          "oklch(37.9% 0.0223 147.6)",
+          "oklch(49.3% 0.0223 147.6)",
+          "oklch(60.7% 0.0223 147.6)",
+          "oklch(72.1% 0.0223 147.6)",
+          "oklch(83.6% 0.0223 147.6)",
+          "oklch(95% 0.0223 147.6)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Moss",
+        "canonical": "#a8d99c",
+        "tonalRamp": [
+          "oklch(15% 0.0975 139.5)",
+          "oklch(26.4% 0.0975 139.5)",
+          "oklch(37.9% 0.0975 139.5)",
+          "oklch(49.3% 0.0975 139.5)",
+          "oklch(60.7% 0.0975 139.5)",
+          "oklch(72.1% 0.0975 139.5)",
+          "oklch(83.6% 0.0975 139.5)",
+          "oklch(95% 0.0975 139.5)"
+        ]
+      },
+      "accent-ink": {
+        "role": "neutral",
+        "displayName": "Moss Ink",
+        "canonical": "#122014",
+        "tonalRamp": [
+          "oklch(15% 0.0302 148.1)",
+          "oklch(26.4% 0.0302 148.1)",
+          "oklch(37.9% 0.0302 148.1)",
+          "oklch(49.3% 0.0302 148.1)",
+          "oklch(60.7% 0.0302 148.1)",
+          "oklch(72.1% 0.0302 148.1)",
+          "oklch(83.6% 0.0302 148.1)",
+          "oklch(95% 0.0302 148.1)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft Forest",
+        "canonical": "#202a22",
+        "tonalRamp": [
+          "oklch(15% 0.0202 150.8)",
+          "oklch(26.4% 0.0202 150.8)",
+          "oklch(37.9% 0.0202 150.8)",
+          "oklch(49.3% 0.0202 150.8)",
+          "oklch(60.7% 0.0202 150.8)",
+          "oklch(72.1% 0.0202 150.8)",
+          "oklch(83.6% 0.0202 150.8)",
+          "oklch(95% 0.0202 150.8)"
+        ]
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "Light Paper",
+        "canonical": "#faf8f0",
+        "tonalRamp": [
+          "oklch(15% 0.0108 95.2)",
+          "oklch(26.4% 0.0108 95.2)",
+          "oklch(37.9% 0.0108 95.2)",
+          "oklch(49.3% 0.0108 95.2)",
+          "oklch(60.7% 0.0108 95.2)",
+          "oklch(72.1% 0.0108 95.2)",
+          "oklch(83.6% 0.0108 95.2)",
+          "oklch(95% 0.0108 95.2)"
+        ]
+      },
+      "light-panel": {
+        "role": "neutral",
+        "displayName": "Light Panel",
+        "canonical": "#fffffc",
+        "tonalRamp": [
+          "oklch(15% 0.0039 106.5)",
+          "oklch(26.4% 0.0039 106.5)",
+          "oklch(37.9% 0.0039 106.5)",
+          "oklch(49.3% 0.0039 106.5)",
+          "oklch(60.7% 0.0039 106.5)",
+          "oklch(72.1% 0.0039 106.5)",
+          "oklch(83.6% 0.0039 106.5)",
+          "oklch(95% 0.0039 106.5)"
+        ]
+      },
+      "light-text": {
+        "role": "neutral",
+        "displayName": "Light Forest Ink",
+        "canonical": "#22291f",
+        "tonalRamp": [
+          "oklch(15% 0.0206 136.3)",
+          "oklch(26.4% 0.0206 136.3)",
+          "oklch(37.9% 0.0206 136.3)",
+          "oklch(49.3% 0.0206 136.3)",
+          "oklch(60.7% 0.0206 136.3)",
+          "oklch(72.1% 0.0206 136.3)",
+          "oklch(83.6% 0.0206 136.3)",
+          "oklch(95% 0.0206 136.3)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Light Muted Sage",
+        "canonical": "#5e675c",
+        "tonalRamp": [
+          "oklch(15% 0.0204 140.0)",
+          "oklch(26.4% 0.0204 140.0)",
+          "oklch(37.9% 0.0204 140.0)",
+          "oklch(49.3% 0.0204 140.0)",
+          "oklch(60.7% 0.0204 140.0)",
+          "oklch(72.1% 0.0204 140.0)",
+          "oklch(83.6% 0.0204 140.0)",
+          "oklch(95% 0.0204 140.0)"
+        ]
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Light Rule",
+        "canonical": "#dce1d5",
+        "tonalRamp": [
+          "oklch(15% 0.0170 125.3)",
+          "oklch(26.4% 0.0170 125.3)",
+          "oklch(37.9% 0.0170 125.3)",
+          "oklch(49.3% 0.0170 125.3)",
+          "oklch(60.7% 0.0170 125.3)",
+          "oklch(72.1% 0.0170 125.3)",
+          "oklch(83.6% 0.0170 125.3)",
+          "oklch(95% 0.0170 125.3)"
+        ]
+      },
+      "light-accent": {
+        "role": "primary",
+        "displayName": "Light Moss",
+        "canonical": "#356942",
+        "tonalRamp": [
+          "oklch(15% 0.0843 150.2)",
+          "oklch(26.4% 0.0843 150.2)",
+          "oklch(37.9% 0.0843 150.2)",
+          "oklch(49.3% 0.0843 150.2)",
+          "oklch(60.7% 0.0843 150.2)",
+          "oklch(72.1% 0.0843 150.2)",
+          "oklch(83.6% 0.0843 150.2)",
+          "oklch(95% 0.0843 150.2)"
+        ]
+      },
+      "light-accent-ink": {
+        "role": "neutral",
+        "displayName": "Light Moss Ink",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.9)",
+          "oklch(26.4% 0.0000 89.9)",
+          "oklch(37.9% 0.0000 89.9)",
+          "oklch(49.3% 0.0000 89.9)",
+          "oklch(60.7% 0.0000 89.9)",
+          "oklch(72.1% 0.0000 89.9)",
+          "oklch(83.6% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
+        ]
+      },
+      "light-soft": {
+        "role": "neutral",
+        "displayName": "Soft Paper",
+        "canonical": "#f0efe7",
+        "tonalRamp": [
+          "oklch(15% 0.0107 100.8)",
+          "oklch(26.4% 0.0107 100.8)",
+          "oklch(37.9% 0.0107 100.8)",
+          "oklch(49.3% 0.0107 100.8)",
+          "oklch(60.7% 0.0107 100.8)",
+          "oklch(72.1% 0.0107 100.8)",
+          "oklch(83.6% 0.0107 100.8)",
+          "oklch(95% 0.0107 100.8)"
+        ]
+      }
+    },
+    "breakpoints": [
+      {
+        "name": "stacked-inbox",
+        "value": "720px"
+      }
+    ],
+    "shadows": [],
+    "motion": []
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Moss sign-in action.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Sign in</button>",
+      "css": ".ds-primary{font-family:\"DM Sans\",sans-serif;font-size:1rem;min-height:44px;padding:.5rem .9rem;border:1px solid var(--line,#374238);border-radius:8px;line-height:1.4;cursor:pointer;background:var(--accent,#a8d99c);color:var(--accent-ink,#122014);border-color:var(--accent,#a8d99c);font-weight:700}.ds-primary:hover{filter:brightness(1.08)}.ds-primary:focus-visible{outline:2px solid var(--accent,#a8d99c);outline-offset:4px}.ds-primary:disabled{opacity:.6;cursor:wait}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Text action for search, refresh, and theme changes.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Refresh</button>",
+      "css": ".ds-secondary{font-family:\"DM Sans\",sans-serif;font-size:1rem;min-height:44px;padding:.5rem .9rem;border:1px solid var(--line,#374238);border-radius:8px;line-height:1.4;cursor:pointer;background:transparent;color:var(--text,#f3f1e7)}.ds-secondary:hover{background:var(--soft,#202a22);border-color:var(--accent,#a8d99c)}.ds-secondary:focus-visible{outline:2px solid var(--accent,#a8d99c);outline-offset:4px}.ds-secondary:disabled{opacity:.6;cursor:wait}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Visible label with a full-width panel-toned field.",
+      "html": "<label class=\"ds-label\" for=\"ds-search\">Search questions and replies</label><input class=\"ds-input\" id=\"ds-search\" type=\"search\" placeholder=\"Try XFC, hobbies, or games\">",
+      "css": ".ds-label{display:block;font:600 1rem/1.6 \"DM Sans\",sans-serif;color:var(--text,#f3f1e7);margin-bottom:.4rem}.ds-input{font:1rem/1.6 \"DM Sans\",sans-serif;width:100%;min-width:0;min-height:44px;padding:.6rem .8rem;border:1px solid var(--line,#374238);border-radius:8px;background:var(--panel,#18201a);color:var(--text,#f3f1e7)}.ds-input::placeholder{color:var(--muted,#b3b7a8)}.ds-input:focus-visible{outline:2px solid var(--accent,#a8d99c);outline-offset:4px}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Plain identity link and text action separated by a rule.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-name\" href=\"#\">Khanh Nguyen</a><button class=\"ds-theme\" type=\"button\">Light mode</button></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:88px;border-bottom:1px solid var(--line,#374238);font:1rem/1.6 \"DM Sans\",sans-serif}.ds-name{color:var(--text,#f3f1e7);text-decoration:none;font-weight:700}.ds-theme{font-family:\"DM Sans\",sans-serif;font-size:1rem;min-height:44px;padding:.5rem .9rem;border:1px solid var(--line,#374238);border-radius:8px;line-height:1.4;cursor:pointer;background:transparent;color:var(--text,#f3f1e7)}.ds-theme:hover{background:var(--soft,#202a22);border-color:var(--accent,#a8d99c)}.ds-name:focus-visible,.ds-theme:focus-visible{outline:2px solid var(--accent,#a8d99c);outline-offset:4px}@media(max-width:720px){.ds-nav{flex-wrap:wrap;padding:1rem 0;min-height:0}}"
+    },
+    {
+      "name": "Selected Visit",
+      "kind": "custom",
+      "refersTo": "visit-selected",
+      "description": "First-question row with secondary visit metadata.",
+      "html": "<button class=\"ds-visit\" type=\"button\" aria-pressed=\"true\"><strong>How does the XFC controller work?</strong><span>Oct 2, 2026 · 2 questions</span></button>",
+      "css": ".ds-visit{display:block;width:100%;text-align:left;font:1rem/1.4 \"DM Sans\",sans-serif;color:var(--text,#f3f1e7);min-height:44px;border:0;border-radius:0;border-bottom:1px solid var(--line,#374238);padding:1rem .7rem;background:transparent;cursor:pointer}.ds-visit:hover{background:var(--soft,#202a22);border-color:var(--accent,#a8d99c)}.ds-visit[aria-pressed=\"true\"]{background:var(--soft,#202a22);outline:1px solid var(--accent,#a8d99c);outline-offset:-1px}.ds-visit:focus-visible{outline:2px solid var(--accent,#a8d99c);outline-offset:4px}.ds-visit strong{display:block;font-weight:600;overflow-wrap:anywhere}.ds-visit span{display:block;font-size:.85rem;color:var(--muted,#b3b7a8);margin-top:.4rem}"
+    },
+    {
+      "name": "Transcript Record",
+      "kind": "custom",
+      "description": "Open ruled block with timestamp, speaker labels, and readable plain text.",
+      "html": "<article class=\"ds-turn\"><time>Oct 2, 2026, 10:30 AM</time><p class=\"ds-speaker\">Visitor</p><p class=\"ds-message\">How does the XFC controller work?</p><p class=\"ds-speaker\">Portfolio guide</p><p class=\"ds-message\">The controller selects actions from the game state.</p></article>",
+      "css": ".ds-turn{font:1rem/1.6 \"DM Sans\",sans-serif;color:var(--text,#f3f1e7);padding:1.2rem 0;border-bottom:1px solid var(--line,#374238)}.ds-turn time{display:block;font-size:.85rem;color:var(--muted,#b3b7a8);margin-bottom:1rem}.ds-speaker{font-size:.85rem;font-weight:700;color:var(--accent,#a8d99c);margin:.8rem 0 .25rem}.ds-message{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:var(--text,#f3f1e7)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Field Notes",
+    "overview": "This document applies only to the private dashboard at `worker/public/admin/`. It extends the existing portfolio identity; the root `DESIGN.md` remains the authority for public portfolio surfaces.\n\nForest ink, warm paper, and moss give the inbox the same editorial character as the portfolio. A plain header, ruled visit list, and spacious transcript keep actual questions and replies central.",
+    "keyCharacteristics": [
+      "Editorial serif headings with readable sans-serif content.",
+      "Flat surfaces and thin rules.",
+      "Dark and light themes with equivalent semantic roles."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Pairing Rule",
+        "body": "Switch all roles together when changing theme; retain the text/accent-ink pairing appropriate to each surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Transcript Legibility Rule",
+        "body": "Questions and replies use body typography, preserve line breaks, and wrap long strings. Speaker labels and timestamps remain visually secondary.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Surface Rule",
+        "body": "Use separators and tonal states to organize the inbox rather than elevated cards.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** inherit Field Notes typography and semantic theme roles within this dashboard.",
+      "**Do** keep questions and replies readable, with preserved line breaks and wrapping.",
+      "**Do** show selection, focus, loading, empty, and failure states explicitly."
+    ],
+    "donts": [
+      "**Don't** turn the visit list or transcript into repeated elevated cards.",
+      "**Don't** add decorative motion or ornamental dashboard metrics.",
+      "**Don't** apply this private inbox composition to public portfolio pages."
+    ]
+  }
+}

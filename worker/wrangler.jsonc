@@ -5,6 +5,22 @@
   "compatibility_date": "2026-10-01",
   "workers_dev": true,
   "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "CHAT_DB",
+      "database_name": "khanh-portfolio-conversations",
+      "database_id": "cf3e7107-c1d7-45b1-91e6-2957b58d5970",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": ["0 * * * *"]
+  },
   "vars": {
     "ALLOWED_ORIGINS": "https://thuykhanh2642.github.io",
     "GEMINI_MODEL": "gemini-3.1-flash-lite"

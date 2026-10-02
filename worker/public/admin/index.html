@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Conversations | Khanh Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+  <!--
+    THESIS: Read the actual questions visitors ask, then follow the whole exchange.
+    OWN-WORLD: Field Notes forest ink, warm paper text, moss controls, and editorial rules.
+    STORY: Sign in, scan visits by their first question, open a transcript, and refresh for new activity.
+    FIRST VIEWPORT: Plain header; a visit list on the left and a generous transcript on the right after sign-in.
+    FORM: Narrow feature extension in the existing world; a familiar inbox. New-work's narrow-request exception applies, so no concept roll.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <header>
+    <a href="https://thuykhanh2642.github.io">Khanh Nguyen</a>
+    <div class="header-actions">
+      <button id="theme-toggle" type="button">Light mode</button>
+      <button id="sign-out" type="button" hidden>Sign out</button>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Conversations</h1>
+      <p>Questions, replies, and the moments the chatbot couldn't answer.</p>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="sign-in-panel" aria-labelledby="sign-in-title">
+      <h2 id="sign-in-title">Owner sign-in</h2>
+      <p>Enter your dashboard password to read saved conversations.</p>
+      <form id="sign-in-form">
+        <label for="password">Dashboard password</label>
+        <input id="password" type="password" autocomplete="current-password" required maxlength="512">
+        <button class="primary" id="sign-in" type="submit">Sign in</button>
+      </form>
+    </section>
+    <section id="dashboard" aria-label="Saved conversations" hidden>
+      <div class="toolbar">
+        <form id="search-form" role="search">
+          <label for="search">Search questions and replies</label>
+          <div class="search-controls">
+            <input id="search" type="search" maxlength="200" placeholder="Try XFC, hobbies, or games">
+            <button type="submit">Search</button>
+          </div>
+        </form>
+        <button id="refresh" type="button">Refresh</button>
+      </div>
+      <p class="retention">Only you can read these transcripts here. Messages leave this dashboard after 30 days; expired records are removed hourly. Visits have anonymous IDs.</p>
+      <div class="inbox">
+        <section class="visits" aria-labelledby="visits-title">
+          <h2 id="visits-title">Recent visits</h2>
+          <p id="list-status" role="status" aria-live="polite"></p>
+          <div id="conversations"></div>
+          <button id="more-conversations" type="button" hidden>Load more visits</button>
+        </section>
+        <section class="transcript" aria-labelledby="transcript-title" aria-busy="false">
+          <h2 id="transcript-title" tabindex="-1">Choose a conversation</h2>
+          <p id="transcript-meta">Select a visit to read its questions and replies.</p>
+          <div id="turns"></div>
+          <button id="more-turns" type="button" hidden>Load more messages</button>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

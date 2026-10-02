@@ -1,4 +1,7 @@
 import { PORTFOLIO_INSTRUCTIONS } from "./knowledge.js";
+import { handleAdmin } from "./admin.js";
+import { purgeExpiredConversations, recordQuestion, recordResult, UUID_PATTERN } from "./conversations.js";
+import { readJson } from "./request.js";
 
 const MAX_QUESTION_LENGTH = 800;
 const MAX_HISTORY_MESSAGES = 6;
@@ -55,6 +58,10 @@ function outputText(response) {
 
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/admin" || url.pathname.startsWith("/admin/")) {
+      return handleAdmin(request, env);
+    }
     const origin = request.headers.get("Origin") || "";
     const allowed = configuredOrigins(env);
 
@@ -67,12 +74,11 @@ export default {
       return new Response(null, { status: 204, headers: corsHeaders });
     }
 
-    const url = new URL(request.url);
     if (request.method !== "POST" || url.pathname !== "/ask") {
       return json({ error: "Not found." }, 404, corsHeaders);
     }
 
-    if (!env.GEMINI_API_KEY || !env.GEMINI_MODEL) {
+    if (!env.GEMINI_API_KEY || !env.GEMINI_MODEL || !env.CHAT_DB) {
       return json({ error: "The assistant is not configured yet." }, 503, corsHeaders);
     }
 
@@ -84,17 +90,29 @@ export default {
 
     let payload;
     try {
-      payload = await request.json();
+      payload = await readJson(request, 40000);
     } catch {
       return json({ error: "Send a valid question." }, 400, corsHeaders);
     }
 
-    const question = typeof payload.question === "string" ? payload.question.trim() : "";
+    const question = typeof payload?.question === "string" ? payload.question.trim() : "";
     if (!question || question.length > MAX_QUESTION_LENGTH) {
       return json({ error: `Questions must be between 1 and ${MAX_QUESTION_LENGTH} characters.` }, 400, corsHeaders);
     }
 
     const history = sanitizeHistory(payload.history);
+    // Older open tabs can omit the ID; each such request becomes a separate visit.
+    const conversationId = payload.conversationId === undefined ? crypto.randomUUID() : payload.conversationId;
+    if (typeof conversationId !== "string" || !UUID_PATTERN.test(conversationId)) {
+      return json({ error: "Send a valid conversation ID." }, 400, corsHeaders);
+    }
+    let turnId;
+    try {
+      turnId = await recordQuestion(env, conversationId, question);
+    } catch {
+      console.error("Conversation storage is unavailable");
+      return json({ error: "The assistant is temporarily unavailable. Please try again later." }, 503, corsHeaders);
+    }
     const contents = [
       ...history.map((message) => ({
         role: message.role === "assistant" ? "model" : "user",
@@ -103,11 +121,14 @@ export default {
       { role: "user", parts: [{ text: question }] },
     ];
 
-    let upstream;
+    const unavailable = "The assistant is temporarily unavailable. Please try again later.";
+    let answer;
+    let failure;
     try {
       const model = encodeURIComponent(env.GEMINI_MODEL);
-      upstream = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+      const upstream = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
         method: "POST",
+        signal: AbortSignal.timeout(35000),
         headers: {
           "x-goog-api-key": env.GEMINI_API_KEY,
           "Content-Type": "application/json",
@@ -124,21 +145,26 @@ export default {
           store: false,
         }),
       });
+      if (!upstream.ok) {
+        console.error("Gemini request failed", upstream.status);
+        failure = unavailable;
+      } else {
+        answer = outputText(await upstream.json());
+        if (!answer) failure = "The assistant did not return an answer. Please try again.";
+      }
     } catch {
-      return json({ error: "The assistant is temporarily unavailable. Please try again later." }, 502, corsHeaders);
+      failure = unavailable;
     }
-
-    if (!upstream.ok) {
-      console.error("Gemini request failed", upstream.status);
-      return json({ error: "The assistant is temporarily unavailable. Please try again later." }, 502, corsHeaders);
+    try {
+      await recordResult(env, turnId, failure ? null : answer, failure || null);
+    } catch {
+      console.error("Could not save the assistant response");
+      return json({ error: unavailable }, 503, corsHeaders);
     }
-
-    const response = await upstream.json();
-    const answer = outputText(response);
-    if (!answer) {
-      return json({ error: "The assistant did not return an answer. Please try again." }, 502, corsHeaders);
-    }
-
+    if (failure) return json({ error: failure }, 502, corsHeaders);
     return json({ answer }, 200, corsHeaders);
+  },
+  async scheduled(_event, env) {
+    await purgeExpiredConversations(env);
   },
 };
