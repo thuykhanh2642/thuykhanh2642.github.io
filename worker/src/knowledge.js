@@ -41,6 +41,118 @@ enjoys learning unfamiliar technologies and working on general software
 engineering problems.
 
 
+# PERSONAL INTERESTS
+
+Sports:
+- Khanh tries to play tennis at least once a week.
+- He also enjoys badminton and table tennis.
+- He played badminton at a relatively high level when he was younger and
+  trained with national-level players.
+- Table tennis is more casual for him, although his father was formerly a table
+  tennis coach.
+- He enjoys experimenting with sports equipment and setup, especially tennis
+  rackets, strings, weight, and feel.
+
+Music:
+- Khanh was traditionally trained in piano for roughly 7-8 years.
+- He now plays occasionally and usually learns whatever songs happen to
+  interest him at the time.
+- Piano remains a long-term hobby rather than something he practices
+  competitively.
+
+Gaming:
+- Khanh enjoys story-driven RPGs, action games, strategy games, and games with
+  strong systems or worldbuilding.
+- Favorite games include:
+  - The Witcher 3
+  - Dragon Age
+  - Baldur's Gate
+  - Halo
+  - Red Alert 3
+- His interest in games also connects with his earlier game-development and
+  game-AI projects.
+
+3D Printing:
+- Khanh enjoys 3D printing, primarily using FDM printing.
+- He currently uses a Bambu Lab A1.
+- He tends to print practical or experimental parts rather than only decorative
+  models.
+- Examples include:
+  - Replacement interior car parts
+  - Replacement car-key covers
+  - Small tools
+  - Replacement parts for miscellaneous projects
+  - Random experiments and prototypes
+
+Cars / DIY:
+- Khanh enjoys working on cars and doing repairs himself when practical.
+- Part of the motivation is saving money, but he also genuinely enjoys learning
+  how mechanical systems work.
+- He tends to prefer understanding and fixing a problem himself rather than
+  immediately outsourcing it.
+
+Computers / Linux:
+- Tinkering with computers is also a hobby.
+- Khanh enjoys troubleshooting Linux, networking, remote-access setups,
+  software configuration, and hardware-related problems.
+- He tends to look for a real solution to everyday technical annoyances rather
+  than immediately accepting a workaround or compromise.
+- This curiosity often turns ordinary computer problems into small engineering
+  projects.
+
+Electronics:
+- Khanh enjoys niche and unusual electronics.
+- He has an interest in radios and holds a GMRS license, this was mostly to help with his outdoor activities.
+- He enjoys experimenting with practical technology and learning how hardware
+  systems work.
+
+Building / Hands-On Projects:
+- Khanh single-handedly built an office in his backyard from the ground up, from foundation to drywall and finishing.
+- The work included stages from foundation through drywall and finishing.
+- He enjoys hands-on projects where he can learn unfamiliar skills while
+  building something practical.
+
+Outdoors:
+- Khanh enjoys hiking, camping, fishing, scenic drives, and exploring outdoors.
+- Favorite hikes include Mount Si and Mailbox Peak via the Old Trail.
+- He considers the Old Trail route on Mailbox Peak particularly difficult.
+- He enjoys both challenging hikes and more relaxed outdoor exploration.
+
+Travel / Exploration:
+- Khanh enjoys traveling and seeing unfamiliar places.
+- He especially likes driving to nearby towns and exploring places close to
+  home.
+- One of his views on travel is that people often know less about the area
+  around where they live than they realize, so he enjoys exploring locally
+  rather than only traveling far away.
+
+General Personality:
+- Khanh tends to be curious about how things work, whether the subject is
+  software, AI, cars, electronics, sports equipment, or home projects.
+- He often prefers experimenting, repairing, modifying, or building something
+  himself instead of immediately replacing it or accepting an imperfect
+  solution.
+- His hobbies frequently become small technical or engineering projects.
+
+
+# FUN FACTS
+
+- Khanh's first programming project started as a simple tic-tac-toe game and
+  eventually became a game-AI and reinforcement-learning project.
+- He was traditionally trained in piano for about 7-8 years.
+- He played badminton at a high level when he was younger and trained with
+  national-level players.
+- His father was formerly a table tennis coach.
+- He enjoys difficult hikes; one of his favorites is Mailbox Peak via the Old
+  Trail.
+- He uses a Bambu Lab A1 and likes printing practical replacement parts and
+  tools.
+- He has a GMRS radio license and enjoys niche electronics.
+- He helped build a backyard office from the foundation through drywall and
+  finishing.
+- He tends to turn everyday problems into small engineering projects.
+
+
 # TECHNICAL SKILLS
 
 ## Languages
@@ -1006,6 +1118,30 @@ moments because I almost always come away having learned something."
 
 Do not turn this into exaggerated claims about perfectionism, intelligence, or
 work ethic.
+
+
+# PERSONAL QUESTIONS
+
+The portfolio assistant may answer light personal questions when the information
+is included in the portfolio facts.
+
+Examples:
+- "What does Khanh do outside coding?"
+- "What sports does he play?"
+- "Does he play music?"
+- "What games does he like?"
+- "What does he do for fun?"
+- "What is something random about him?"
+- "Does he have any hands-on hobbies?"
+
+Keep personal answers casual and human rather than resume-like.
+
+Do not reveal private or sensitive information that is not explicitly included
+in the portfolio facts.
+
+When a visitor asks about Khanh personally, prioritize hobbies, interests,
+curiosity, and documented experiences rather than trying to infer personality
+traits that are not explicitly stated.
 
 
 # STOCK PROJECT SAFETY

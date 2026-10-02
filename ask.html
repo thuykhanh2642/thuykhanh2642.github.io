@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ask questions about Khanh Nguyen's projects, technical background, and portfolio work.">
-  <title>Ask About My Work | Khanh Nguyen</title>
+  <meta name="description" content="Ask Khanh Nguyen's portfolio assistant about his projects, technical background, hobbies, and interests.">
+  <title>Ask Me Anything | Khanh Nguyen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -28,9 +28,9 @@
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="xfc.html">XFC Case Study</a>
-        <a class="active" href="ask.html" aria-current="page">Ask</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-ask active" href="ask.html" aria-current="page">Ask me <span>Prototype</span></a>
       </div>
       <button class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button>
     </div>
@@ -38,22 +38,22 @@
 
   <main class="wrap page ask-page">
     <section class="ask-intro" aria-labelledby="ask-title">
-      <h1 id="ask-title">Ask about my work.</h1>
+      <h1 id="ask-title">Ask me anything.</h1>
       <div class="ask-intro-copy">
-        <p>Ask about a project, the tools I used, or how something was built.</p>
-        <p class="ask-disclosure">Answers use Gemini and information from this site. Do not include private information.</p>
+        <p>Projects, hobbies, games, sports, 3D printing, or the things I like to build and fix.</p>
+        <p class="ask-disclosure"><span>AI prototype</span> Answers use Gemini and the information I provided for this site. Do not include private information.</p>
       </div>
     </section>
 
-    <section class="ask-workspace" aria-label="Ask about Khanh's portfolio">
+    <section class="ask-workspace" aria-label="Ask the portfolio prototype about Khanh">
       <div class="ask-tools">
         <div class="ask-suggestions">
           <span>Suggested questions</span>
           <div class="ask-prompts">
             <button type="button" class="ask-prompt" data-question="What did Khanh build for the XFC competition?">XFC controller</button>
-            <button type="button" class="ask-prompt" data-question="How was the stock prediction model evaluated?">Stock model</button>
-            <button type="button" class="ask-prompt" data-question="What does the ZeroDCE project do?">ZeroDCE</button>
-            <button type="button" class="ask-prompt" data-question="Which games has Khanh worked on?">Games</button>
+            <button type="button" class="ask-prompt" data-question="What does Khanh do outside coding?">Outside coding</button>
+            <button type="button" class="ask-prompt" data-question="What games does Khanh like?">Favorite games</button>
+            <button type="button" class="ask-prompt" data-question="What does Khanh use his 3D printer for?">3D printing</button>
           </div>
         </div>
         <a class="ask-contact-link" href="contact.html">Contact me directly</a>
@@ -63,14 +63,14 @@
         <div class="ask-conversation" id="chat-log" aria-live="polite" aria-relevant="additions">
           <article class="ask-message" data-role="assistant">
             <span>Portfolio guide</span>
-            <p>I can answer questions about the projects, technical decisions, and experience shown here.</p>
+            <p>Ask about my work, hobbies, interests, or anything else covered here.</p>
           </article>
         </div>
 
         <form class="ask-form" id="chat-form">
           <label for="chat-question">Your question</label>
           <div class="ask-composer">
-            <textarea id="chat-question" name="question" rows="2" maxlength="800" placeholder="What changed in the XFC controller over time?" required></textarea>
+            <textarea id="chat-question" name="question" rows="2" maxlength="800" placeholder="What do you do outside coding?" required></textarea>
             <button class="btn primary" id="chat-submit" type="submit">Ask</button>
           </div>
           <span class="ask-status" id="chat-status" role="status" aria-live="polite"></span>

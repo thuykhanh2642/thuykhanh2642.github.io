@@ -4,8 +4,9 @@
 .ask-intro-copy{padding-bottom:.4rem}
 .ask-intro p{max-width:40rem;margin:0;color:var(--text);font-size:1.06rem;line-height:1.65}
 .ask-intro .ask-disclosure{margin-top:.8rem;color:var(--muted);font-size:.88rem;line-height:1.55}
+.ask-disclosure span{display:inline-block;margin-right:.45rem;color:var(--accent-2);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 
-.ask-workspace{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-xl);background:var(--panel-strong)}
+.ask-workspace{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-xl);background:var(--panel-strong);box-shadow:0 22px 58px rgba(0,0,0,.16)}
 .ask-tools{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem 1.25rem;border-bottom:1px solid var(--line);background:var(--panel)}
 .ask-suggestions{display:flex;align-items:center;gap:1rem;min-width:0}
 .ask-suggestions > span{flex:0 0 auto;color:var(--muted);font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}

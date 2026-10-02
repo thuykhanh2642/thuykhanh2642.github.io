@@ -57,6 +57,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-2);outline-o
 .nav a{padding:8px 0;border-radius:0;color:var(--muted);font-size:1rem;font-weight:700}
 .nav a:hover,.nav a:focus-visible,.nav a.active{transform:none;background:transparent;color:var(--accent-2)}
 .nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}
+.nav a.nav-ask{display:inline-flex;align-items:center;gap:.5rem;padding:.48rem .72rem;border:1px solid var(--line);border-radius:999px;background:var(--accent-soft);color:var(--text)}
+.nav a.nav-ask span{padding-left:.5rem;border-left:1px solid var(--line);color:var(--accent-2);font-size:.63rem;line-height:1;letter-spacing:.08em;text-transform:uppercase}
+.nav a.nav-ask:hover,.nav a.nav-ask:focus-visible{border-color:var(--accent);background:var(--surface-soft);color:var(--accent-2)}
+.nav a.nav-ask.active{border-color:var(--accent);background:var(--accent);color:var(--accent-ink);box-shadow:none}
+.nav a.nav-ask.active span{border-color:rgba(18,32,20,.35);color:var(--accent-ink)}
 
 .theme-toggle{
   flex:0 0 auto;
