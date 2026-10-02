@@ -3,294 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Khanh Nguyen builds reinforcement learning systems, ML applications, and game software.">
-  <title>Khanh Nguyen | ML & Software Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect width=%2724%27 height=%2724%27 fill=%27%231a2430%27/%3E%3Cpath d=%27M5 5h9v9H5z%27 fill=%27%233a68c8%27/%3E%3Cpath d=%27M14 14h5v5h-5z%27 fill=%27%23f1bf77%27/%3E%3C/svg%3E">
+  <meta name="description" content="Khanh Nguyen is a DigiPen Computer Science student building reinforcement learning systems, machine learning tools, and games.">
+  <title>Khanh Nguyen | RL, ML, and Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
-  <nav class="topbar">
-    <div class="wrap">
-      <a class="brand" href="index.html">Khanh Nguyen</a>
-      <div class="nav">
-        <a class="active" href="index.html">Home</a>
+<body class="home-page quiet-home">
+  <nav class="quiet-nav" aria-label="Primary navigation">
+    <div class="quiet-shell quiet-nav-inner">
+      <a class="quiet-brand" href="index.html">Khanh Nguyen</a>
+      <div class="quiet-nav-links">
+        <a class="active" href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
         <a href="xfc.html">XFC Case Study</a>
+        <a href="ask.html">Ask</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button>
     </div>
   </nav>
 
-  <main class="wrap page">
-    <section class="hero reveal">
-      <div class="hero-grid">
-        <div class="card hero-copy">
-          <div class="eyebrow">CS student at DigiPen</div>
-          <h1>I like building RL systems, ML tools, and game projects.</h1>
-          <p class="lead">Computer Science student at DigiPen building RL systems, ML apps, and C/C++ game projects.</p>
-          <div class="btn-row">
-            <a class="btn primary" href="projects.html">View Projects</a>
-            <a class="btn secondary" href="resume.html">Resume</a>
+  <main>
+    <section class="quiet-hero" aria-labelledby="home-title">
+      <div class="quiet-shell quiet-hero-grid">
+        <div class="quiet-hero-copy">
+          <p class="quiet-greeting">Hi, I’m Khanh.</p>
+          <h1 id="home-title">RL systems, ML tools, and games.</h1>
+          <p class="quiet-lead">I’m a Computer Science student at DigiPen working across reinforcement learning, machine learning, and software projects.</p>
+          <div class="quiet-actions">
+            <a class="quiet-button quiet-button-primary" href="projects.html">View projects</a>
+            <a class="quiet-button quiet-button-secondary" href="resume.html">Resume</a>
           </div>
-          <div class="chips">
-            <span class="chip">PyTorch</span>
-            <span class="chip">Scikit-Learn</span>
-            <span class="chip">Pandas</span>
-            <span class="chip">Reinforcement Learning</span>
-            <span class="chip">C/C++</span>
-            <span class="chip">Streamlit</span>
-          </div>
+          <ul class="quiet-tags" aria-label="Technical focus">
+            <li>PyTorch</li>
+            <li>Reinforcement Learning</li>
+            <li>Computer Vision</li>
+            <li>C/C++</li>
+          </ul>
         </div>
 
-        <aside class="panel">
-          <div class="panel-top">
-            <h2 style="margin:0;font-size:1.08rem;">Quick Highlights</h2>
-            <span class="signal">AT A GLANCE</span>
-          </div>
-          <div class="mini-grid">
-            <div class="mini-card">
-              <h3>RL Controller</h3>
-              <strong>XFC</strong>
-              <p class="muted">Built an RL controller for the Kessler Game simulation environment.</p>
-            </div>
-            <div class="mini-card">
-              <h3>Training</h3>
-              <strong>50%</strong>
-              <p class="muted">Reduced training time while maintaining controller performance.</p>
-            </div>
-            <div class="mini-card">
-              <h3>ML App</h3>
-              <strong>0.76 F1</strong>
-              <p class="muted">Stock movement classifier with time-aware feature engineering.</p>
-            </div>
-            <div class="mini-card">
-              <h3>Game Release</h3>
-              <strong>Steam</strong>
-              <p class="muted">Published a puzzle platformer with UI, save, and settings systems.</p>
-            </div>
-          </div>
-        </aside>
+        <figure class="quiet-hero-media">
+          <a href="xfc.html" aria-label="Open the XFC case study">
+            <img src="XFC/map2.gif" alt="Gameplay from the Kessler Game environment showing the XFC controller during a live run." fetchpriority="high">
+          </a>
+          <figcaption>Kessler Game · XFC controller</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="stats-grid">
-        <article class="stat-card">
-          <span>Featured Project</span>
-          <strong>XFC RL</strong>
-          <p class="muted">Hybrid fuzzy-logic and PPO controller for real-time spacecraft decision-making.</p>
+    <section class="quiet-work" aria-labelledby="work-title">
+      <div class="quiet-shell">
+        <div class="quiet-section-head">
+          <h2 id="work-title">Selected work</h2>
+          <a href="projects.html">All projects</a>
+        </div>
+
+        <article class="quiet-feature-project">
+          <a class="quiet-project-image" href="xfc.html">
+            <img src="XFC/foundation_dashboard.png" alt="Training dashboard from the XFC controller foundation stage.">
+          </a>
+          <div class="quiet-project-copy">
+            <h3>RL controller for the Kessler Game</h3>
+            <p>Built for the Explainable Fuzzy Competition with fuzzy control, PPO, and staged training across multiple scenario groups.</p>
+            <div class="quiet-project-meta">Python · PyTorch · PPO · Fuzzy Logic</div>
+            <a class="quiet-text-link" href="xfc.html">Read the case study</a>
+          </div>
         </article>
-        <article class="stat-card">
-          <span>Measured Result</span>
-          <strong>50%</strong>
-          <p class="muted">Training-time reduction through PPO pipeline optimization and hybrid control design.</p>
-        </article>
-        <article class="stat-card">
-          <span>ML App</span>
-          <strong>0.76 F1</strong>
-          <p class="muted">Stock direction prediction with engineered features and time-aware validation.</p>
-        </article>
-        <article class="stat-card">
-          <span>Shipped Work</span>
-          <strong>Steam</strong>
-          <p class="muted">Published team game project with UI, audio, save flow, and optimization work.</p>
-        </article>
+
+        <div class="quiet-project-list">
+          <a class="quiet-project-row" href="stock.html">
+            <span class="quiet-project-name">Stock Prediction Model</span>
+            <span>Time-aware feature engineering and model evaluation in Streamlit.</span>
+            <span class="quiet-project-type">ML application</span>
+          </a>
+          <a class="quiet-project-row" href="https://github.com/thuykhanh2642/Task-Parser-Assistant" target="_blank" rel="noopener noreferrer">
+            <span class="quiet-project-name">Task Parser Assistant</span>
+            <span>FastAPI service and Chrome extension for local task reminders.</span>
+            <span class="quiet-project-type">Software tool</span>
+          </a>
+          <a class="quiet-project-row" href="https://github.com/wethan2/CS-570-Project" target="_blank" rel="noopener noreferrer">
+            <span class="quiet-project-name">ZeroDCE Low-Light Enhancement</span>
+            <span>Reduced ZeroDCE model with image and webcam inference.</span>
+            <span class="quiet-project-type">Computer vision</span>
+          </a>
+          <a class="quiet-project-row" href="shifter.html">
+            <span class="quiet-project-name">Shifter</span>
+            <span>Published 2D puzzle platformer with UI, settings, audio, and save work.</span>
+            <span class="quiet-project-type">Steam release</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="section reveal">
-      <div class="section-head">
+    <section class="quiet-focus" aria-labelledby="focus-title">
+      <div class="quiet-shell quiet-focus-grid">
+        <h2 id="focus-title">What I work on</h2>
+        <div class="quiet-focus-list">
+          <article>
+            <h3>Reinforcement learning</h3>
+            <p>Policy training, control decisions, staged scenarios, and evaluation.</p>
+          </article>
+          <article>
+            <h3>Machine learning</h3>
+            <p>Feature pipelines, model validation, computer vision, and practical ML apps.</p>
+          </article>
+          <article>
+            <h3>Games and tools</h3>
+            <p>Interactive software, C/C++ projects, and systems built for people to use.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiet-close" aria-labelledby="close-title">
+      <div class="quiet-shell quiet-close-inner">
         <div>
-          <div class="kicker">About</div>
-          <h2>Computer Science student focused on machine learning and software.</h2>
+          <h2 id="close-title">Want the full picture?</h2>
+          <p>Projects, technical detail, and contact information are all here.</p>
         </div>
-      </div>
-      <div class="grid-2">
-        <article class="card">
-          <p>I'm a Computer Science student at DigiPen with a focus on machine learning. My work has mostly been in reinforcement learning, ML applications, and technical software projects, and I enjoy building the surrounding systems that make those projects usable in practice.</p>
-        </article>
-        <aside class="card">
-          <ul class="list">
-            <li><strong>Focus</strong>Reinforcement learning, machine learning, and software systems.</li>
-            <li><strong>Projects</strong>Controllers, ML tools, APIs, and interactive applications.</li>
-            <li><strong>Interest</strong>Projects that involve both modeling and engineering.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Featured Project</div>
-          <h2>Recent RL work.</h2>
+        <div class="quiet-close-links">
+          <a href="resume.html">Open resume</a>
+          <a href="contact.html">Get in touch</a>
         </div>
-        <p>RL controller work focused on training efficiency and control design.</p>
-      </div>
-      <div class="grid-2">
-        <article class="card featured-card">
-          <div class="label">Featured Work</div>
-          <h3>RL controller for the Kessler Game simulation environment</h3>
-          <p class="sub">Built a hybrid controller that combines Sugeno-type fuzzy logic, PPO, scenario conditioning, and staged training across multiple scenario groups.</p>
-          <div class="tags" style="margin-top:18px;">
-            <span class="tag">Python</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">PPO + GAE</span>
-            <span class="tag">Fuzzy Logic</span>
-          </div>
-          <ul class="list" style="margin-top:22px;">
-            <li><strong>Staged training</strong>Used foundation, motion, pressure, and full scenario groups to build the controller progressively.</li>
-            <li><strong>50% faster training</strong>Used GAE, mini-batch updates, and KL-based stopping to cut training time while maintaining performance.</li>
-            <li><strong>Context inputs</strong>Used time-to-collision, relative velocity, and spatial signals to improve control decisions.</li>
-          </ul>
-          <div class="actions">
-            <a class="btn primary" href="xfc.html">Read Case Study</a>
-            <a class="btn secondary" href="projects.html">All Projects</a>
-          </div>
-        </article>
-        <aside class="visual-card">
-          <div class="panel-top">
-            <h3 style="margin:0;font-size:1.05rem;">Architecture Snapshot</h3>
-            <span class="signal">SYSTEM VIEW</span>
-          </div>
-          <div class="diagram-row">
-            <div class="node"><strong>Scenario State</strong><p>TTC, velocity, proximity, and context features from the environment.</p></div>
-            <div class="node"><strong>Fuzzy Policy</strong><p>Sugeno-based maneuver policy for thrust and turn decisions.</p></div>
-            <div class="node"><strong>Scenario Bias</strong><p>Scenario-conditioned offsets adapt the policy across encounter types.</p></div>
-          </div>
-          <div class="connector"></div>
-          <div class="diagram-row">
-            <div class="node"><strong>Warm Start</strong><p>Behavior cloning stabilizes the starting policy.</p></div>
-            <div class="node"><strong>PPO Loop</strong><p>GAE, mini-batches, and KL early stopping improve efficiency.</p></div>
-            <div class="node"><strong>Hybrid Control</strong><p>Learned maneuvering stays paired with structured combat logic.</p></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Selected Projects</div>
-          <h2>Other projects.</h2>
-        </div>
-        <p>Other work includes ML applications, software tools, and shipped game projects.</p>
-      </div>
-      <div class="projects-grid">
-        <article class="card project-card">
-          <span class="date-pill">Sep 2024 - Sep 2025</span>
-          <h3>Stock Prediction Model</h3>
-          <p class="muted">Interactive Streamlit application for stock-trend prediction, training, and result visualization with time-aware ML workflows.</p>
-          <div class="tags" style="margin:18px 0;">
-            <span class="tag">Python</span>
-            <span class="tag">Scikit-Learn</span>
-            <span class="tag">Streamlit</span>
-          </div>
-          <ul>
-            <li>Engineered RSI, MACD, Bollinger bands, moving averages, and lag-based features.</li>
-            <li>Used TimeSeriesSplit plus randomized and grid search tuning.</li>
-            <li>Reached an F1-score of 0.76 on price-increase prediction.</li>
-          </ul>
-        </article>
-        <article class="card project-card">
-          <span class="date-pill">Mar 2026 - Apr 2026</span>
-          <h3>Task Parser Assistant</h3>
-          <p class="muted">Natural-language task parser with a FastAPI backend and Chrome extension reminder flow.</p>
-          <div class="tags" style="margin:18px 0;">
-            <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Chrome Extension</span>
-          </div>
-          <ul>
-            <li>Parsed task text into structured fields like command, date, time, people, and location.</li>
-            <li>Built a FastAPI service and Manifest V3 extension for local reminder scheduling.</li>
-            <li>Added automated tests for preprocessing, parsing, and API behavior.</li>
-          </ul>
-        </article>
-        <article class="card project-card">
-          <span class="date-pill">Nov 2025 - Dec 2025</span>
-          <h3>ZeroDCE Low-Light Enhancement</h3>
-          <p class="muted">Low-light image enhancement project built around Zero-Reference Deep Curve Estimation.</p>
-          <div class="tags" style="margin:18px 0;">
-            <span class="tag">Python</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">Computer Vision</span>
-          </div>
-          <ul>
-            <li>Implemented a reduced ZeroDCE variant with a smaller model footprint than the original DCE-Net.</li>
-            <li>Trained with exposure, color constancy, illumination smoothness, and spatial consistency losses.</li>
-            <li>Added CLI inference and real-time webcam enhancement for side-by-side output.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="actions" style="margin-top:22px;">
-        <a class="btn primary" href="projects.html">See All Projects</a>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Skills</div>
-          <h2>Tools I use.</h2>
-        </div>
-        <p>Tools I use across ML, software, and game development.</p>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Languages</h3>
-          <div class="chips">
-            <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">HTML/CSS</span>
-          </div>
-        </article>
-        <article class="skill-card">
-          <h3>ML / Data</h3>
-          <div class="chips">
-            <span class="chip">PyTorch</span><span class="chip">Scikit-Learn</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span>
-          </div>
-        </article>
-        <article class="skill-card">
-          <h3>Developer Tools</h3>
-          <div class="chips">
-            <span class="chip">Git</span><span class="chip">Visual Studio</span><span class="chip">VS Code</span><span class="chip">IntelliJ</span><span class="chip">Conda</span><span class="chip">JupyterLab</span><span class="chip">Unity</span>
-          </div>
-        </article>
-        <article class="skill-card">
-          <h3>Knowledge</h3>
-          <div class="chips">
-            <span class="chip">Reinforcement Learning</span><span class="chip">ML Pipelines</span><span class="chip">Algorithms</span><span class="chip">Data Structures</span><span class="chip">OOP</span><span class="chip">Linux / WSL</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="cta-grid">
-        <article class="resume-card">
-          <div class="kicker">Resume</div>
-          <h3>Resume.</h3>
-          <div class="actions" style="margin-top:22px;">
-            <a class="btn primary" href="resume.html">View Resume</a>
-            <a class="btn secondary" href="KhanhNguyen_Resume.pdf" download>Download PDF</a>
-          </div>
-        </article>
-        <article class="contact-card">
-          <div class="kicker">Contact</div>
-          <h3>Want to talk about ML, software, or internships?</h3>
-          <p class="muted">Get in touch for ML, software, or collaboration opportunities.</p>
-          <div class="actions" style="margin-top:22px;">
-            <a class="btn primary" href="contact.html">Get In Touch</a>
-          </div>
-        </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap foot">
+  <footer class="quiet-footer">
+    <div class="quiet-shell">
       <span>Khanh Nguyen</span>
       <span id="year">2026</span>
     </div>

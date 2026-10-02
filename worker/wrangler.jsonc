@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "khanh-portfolio-chat",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://thuykhanh2642.github.io",
+    "OPENAI_MODEL": "gpt-5-mini"
+  },
+  "ratelimits": [
+    {
+      "name": "CHAT_RATE_LIMITER",
+      "namespace_id": "4102",
+      "simple": {
+        "limit": 12,
+        "period": 60
+      }
+    }
+  ]
+}

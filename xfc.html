@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Crect width=%2724%27 height=%2724%27 fill=%27%2306101d%27/%3E%3Cpath d=%27M5 5h9v9H5z%27 fill=%27%235eb8f7%27/%3E%3Cpath d=%27M14 14h5v5h-5z%27 fill=%27%23f4dc80%27/%3E%3C/svg%3E">
   <meta name="description" content="Case study for Khanh Nguyen's reinforcement learning controller built for the Kessler Game environment used in the Explainable Fuzzy Competition.">
   <title>XFC Case Study | Khanh Nguyen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
   <nav class="topbar">
@@ -18,9 +20,11 @@
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a class="active" href="xfc.html">XFC Case Study</a>
+        <a href="ask.html">Ask</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button>
     </div>
   </nav>
 
@@ -37,8 +41,8 @@
           </div>
         </div>
         <aside class="card preview-card hero-preview-card">
-          <a class="preview-frame preview-video" href="xfc/map2.gif" target="_blank" rel="noreferrer">
-            <img src="xfc/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
+          <a class="preview-frame preview-video" href="XFC/map2.gif" target="_blank" rel="noreferrer">
+            <img src="XFC/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
           </a>
         </aside>
       </div>
@@ -78,8 +82,8 @@
       </div>
       <div class="proof-grid">
         <figure class="card proof-card">
-          <a class="proof-frame" href="xfc/pipeline.png" target="_blank" rel="noreferrer">
-            <img src="xfc/pipeline.png" alt="Pipeline diagram for the XFC training setup.">
+          <a class="proof-frame" href="XFC/pipeline.png" target="_blank" rel="noreferrer">
+            <img src="XFC/pipeline.png" alt="Pipeline diagram for the XFC training setup.">
           </a>
           <figcaption class="proof-caption">
             <strong>Training pipeline</strong>
@@ -88,18 +92,18 @@
         </figure>
         <div class="proof-stack">
           <figure class="card proof-card">
-            <a class="proof-frame proof-frame-tall" href="xfc/ppo.gif" target="_blank" rel="noreferrer">
-              <img src="xfc/ppo.gif" alt="Animated XFC gameplay run using the PPO controller.">
+            <a class="proof-frame proof-frame-tall" href="XFC/ppo.gif" target="_blank" rel="noreferrer">
+              <img src="XFC/ppo.gif" alt="Animated XFC gameplay run using the PPO controller.">
             </a>
           </figure>
           <figure class="card proof-card">
-            <a class="proof-frame proof-frame-tall" href="xfc/map2.gif" target="_blank" rel="noreferrer">
-              <img src="xfc/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
+            <a class="proof-frame proof-frame-tall" href="XFC/map2.gif" target="_blank" rel="noreferrer">
+              <img src="XFC/map2.gif" alt="Gameplay GIF from the Kessler Game environment showing the controller during a live run.">
             </a>
           </figure>
           <figure class="card proof-card">
-            <a class="proof-frame" href="xfc/full/trajectory_crossing_lanes.png" target="_blank" rel="noreferrer">
-              <img src="xfc/full/trajectory_crossing_lanes.png" alt="Crossing lanes trajectory plot from XFC evaluation.">
+            <a class="proof-frame" href="XFC/full/trajectory_crossing_lanes.png" target="_blank" rel="noreferrer">
+              <img src="XFC/full/trajectory_crossing_lanes.png" alt="Crossing lanes trajectory plot from XFC evaluation.">
             </a>
             <figcaption class="proof-caption">
               <strong>Trajectory view</strong>
@@ -110,8 +114,8 @@
       </div>
       <div class="proof-grid proof-grid-charts">
         <figure class="card proof-card">
-          <a class="proof-frame" href="xfc/full/training_reward_curve.png" target="_blank" rel="noreferrer">
-            <img src="xfc/full/training_reward_curve.png" alt="Training reward curve for the XFC controller.">
+          <a class="proof-frame" href="XFC/full/training_reward_curve.png" target="_blank" rel="noreferrer">
+            <img src="XFC/full/training_reward_curve.png" alt="Training reward curve for the XFC controller.">
           </a>
           <figcaption class="proof-caption">
             <strong>Training reward curve</strong>
@@ -123,8 +127,8 @@
           </div>
         </figure>
         <figure class="card proof-card">
-          <a class="proof-frame" href="xfc/full/scenario_performance_best.png" target="_blank" rel="noreferrer">
-            <img src="xfc/full/scenario_performance_best.png" alt="Scenario performance bar chart for the XFC controller.">
+          <a class="proof-frame" href="XFC/full/scenario_performance_best.png" target="_blank" rel="noreferrer">
+            <img src="XFC/full/scenario_performance_best.png" alt="Scenario performance bar chart for the XFC controller.">
           </a>
           <figcaption class="proof-caption">
             <strong>Scenario performance</strong>

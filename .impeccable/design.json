@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T00:00:00Z",
+  "title": "Design System: Khanh Nguyen Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "neutral",
+        "displayName": "Quiet Night",
+        "canonical": "#10161f",
+        "tonalRamp": ["#10161f", "#151d28", "#1b2633", "#2b394a", "#586574", "#aab5c3", "#dce2e8", "#eef2f6"]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Work Blue",
+        "canonical": "#2f63c6",
+        "tonalRamp": ["#102a5f", "#234e9c", "#2f63c6", "#5f89dc", "#91afea", "#c3d3f3", "#e3ebfa", "#f6f8ff"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage and major section headlines."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Navigation, descriptions, and technical context."
+      }
+    },
+    "shadows": [
+      {
+        "name": "artifact-lift",
+        "value": "0 18px 48px rgba(0,0,0,.22)",
+        "purpose": "A restrained lift for primary project media."
+      }
+    ],
+    "motion": [
+      {
+        "name": "artifact-follow",
+        "value": "5px pointer-linked transform with a subtle background wash",
+        "purpose": "Keeps the XFC capture responsive on desktop without obscuring content."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "720px"
+      }
+    ]
+  },
+  "narrative": {
+    "northStar": "Quiet Project Canvas",
+    "overview": "A dark editorial portfolio with an optional light theme, real project media, clear navigation, and a restrained blue accent.",
+    "keyCharacteristics": [
+      "Real project artifacts lead the page",
+      "Readable, comfortably sized navigation",
+      "Editorial rows rather than card grids",
+      "One optional, accessible pointer interaction"
+    ],
+    "dos": [
+      "Use real screenshots and gameplay to support technical claims.",
+      "Keep copy grounded and directly tied to the work.",
+      "Use blue for actions, technical metadata, and active navigation.",
+      "Honor reduced-motion and touch-device fallbacks."
+    ],
+    "donts": [
+      "Do not use dark neon grids, glassy dashboard cards, or technical-grid decoration.",
+      "Do not use fake chat interfaces, mascots, or stock AI imagery.",
+      "Do not compress navigation or hero type below a comfortable reading scale.",
+      "Do not add decorative motion without a clear purpose."
+    ]
+  }
+}
