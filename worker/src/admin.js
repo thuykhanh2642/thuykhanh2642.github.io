@@ -23,7 +23,7 @@ function cookie(value, maxAge, url) {
 }
 
 function configured(env) {
-  return typeof env.CHAT_ADMIN_PASSWORD === "string" && env.CHAT_ADMIN_PASSWORD.length >= 32;
+  return typeof env.CHAT_ADMIN_PASSWORD === "string" && env.CHAT_ADMIN_PASSWORD.length >= 16;
 }
 
 async function signingKey(password) {
@@ -67,7 +67,7 @@ function offsetFrom(url) {
 }
 
 async function api(request, env, url) {
-  if (!configured(env)) return json({ error: "Owner sign-in needs a dashboard password of at least 32 characters." }, 503);
+  if (!configured(env)) return json({ error: "Owner sign-in needs a dashboard password of at least 16 characters." }, 503);
   if (request.method === "POST" && request.headers.get("Origin") !== url.origin) {
     return json({ error: "Open this dashboard directly to sign in." }, 403);
   }

@@ -6,7 +6,7 @@ import worker from "../src/index.js";
 
 const ownerOrigin = "https://chat.example";
 const portfolioOrigin = "https://portfolio.example";
-const password = "synthetic-test-password-with-32-characters";
+const password = "test-password-16";
 const visitId = "d9135f29-b14f-421f-bd89-adf46c55c094";
 let database;
 let env;
@@ -89,6 +89,17 @@ test("wrong passwords, cross-origin sign-in, missing setup, and throttled login 
   assert.equal((await worker.fetch(request("/admin/api/login", { method: "POST", body: { password } }), env)).status, 429);
   env.CHAT_ADMIN_PASSWORD = "short";
   assert.equal((await worker.fetch(request("/admin/api/session"), env)).status, 503);
+});
+
+test("owner passwords accept 16 characters and reject 15", async () => {
+  assert.equal(password.length, 16);
+  env.CHAT_ADMIN_PASSWORD = password.slice(0, 15);
+  const tooShort = await worker.fetch(request("/admin/api/session"), env);
+  assert.equal(tooShort.status, 503);
+  assert.match((await tooShort.json()).error, /at least 16 characters/);
+  env.CHAT_ADMIN_PASSWORD = password;
+  const cookie = await login();
+  assert.equal((await worker.fetch(request("/admin/api/session", { cookie }), env)).status, 200);
 });
 
 test("expired sessions and cookies signed with an old password are rejected", async () => {

@@ -1,5 +1,5 @@
 GEMINI_API_KEY=replace-with-your-api-key
 GEMINI_MODEL=gemini-3.1-flash-lite
 ALLOWED_ORIGINS=http://127.0.0.1:4173
-# Use a unique password of at least 32 characters. Never put it in browser code.
+# Use a unique password of at least 16 characters. Never put it in browser code.
 CHAT_ADMIN_PASSWORD=replace-with-a-long-random-owner-password

@@ -11,7 +11,7 @@ This Cloudflare Worker powers `ask.html`. It accepts questions only from the con
 ## Conversation dashboard
 
 - Open the Worker URL ending in `/admin/`, not the GitHub Pages URL.
-- Sign in using `CHAT_ADMIN_PASSWORD`. Use a unique, randomly generated password of at least 32 characters, kept in a password manager. The password is a Worker secret, never part of the public site or Git history.
+- Sign in using `CHAT_ADMIN_PASSWORD`. Use a unique, randomly generated password of at least 16 characters, kept in a password manager. The password is a Worker secret, never part of the public site or Git history.
 - Browse visits, search questions and replies, select a visit to read the exchange, and refresh for new activity. Long lists and transcripts have load-more controls.
 - An anonymous visit ID is saved in browser session storage. It survives page refreshes but is not a visitor identity; an older tab without the ID creates a separate visit per question. Past conversations cannot be recovered.
 - No visitor names, emails, or IP addresses are saved in the transcript database. IPs are used only by the existing request rate limiter.
@@ -23,7 +23,7 @@ This Cloudflare Worker powers `ask.html`. It accepts questions only from the con
 
 1. Run `npm install` in this folder.
 2. Copy `.dev.vars.example` to `.dev.vars`.
-3. Set `GEMINI_API_KEY` and a unique `CHAT_ADMIN_PASSWORD` of at least 32 characters. Do not commit `.dev.vars`.
+3. Set `GEMINI_API_KEY` and a unique `CHAT_ADMIN_PASSWORD` of at least 16 characters. Do not commit `.dev.vars`.
 4. Run `npm run db:local` to apply the schema to the local database.
 5. Run `npm run dev`. Open the printed local Worker URL ending in `/admin/`.
 6. Serve the portfolio locally at `http://127.0.0.1:4173`, then set `window.PORTFOLIO_CHAT_ENDPOINT` in `../chat-config.js` to the local Worker URL ending in `/ask`. Restore the production endpoint before publishing.
@@ -48,7 +48,7 @@ Run these steps from `worker/` after approval to enable logging on the live site
 6. Confirm `ALLOWED_ORIGINS` matches the live portfolio URL, then run `npm run deploy`.
 7. Open `https://khanh-portfolio-chat.thuykhanh2642.workers.dev/admin/`, sign in, ask a non-private test question from the live site, and confirm its reply appears. Confirm `/admin/api/conversations` returns 401 without an owner cookie.
 
-As of October 2, 2026, the visitor notice and visit IDs are published, the real database is bound and migrated, and the Worker is deployed with its hourly cleanup schedule. Live logging was verified with two non-private deployment test questions and replies grouped into one visit. Owner sign-in still needs a `CHAT_ADMIN_PASSWORD` of at least 32 characters; secret existence alone is insufficient. After updating it, verify `/admin/api/session` returns 401 without an owner cookie and sign in at the live dashboard. Keep deployment test records unless deletion is explicitly approved.
+As of October 2, 2026, the visitor notice and visit IDs are published, the real database is bound and migrated, and the Worker is deployed with its hourly cleanup schedule. Live logging was verified with two non-private deployment test questions and replies grouped into one visit. At the user's request, the owner password minimum is now 16 characters; secret existence alone is insufficient. Verify `/admin/api/session` returns 401 without an owner cookie and sign in at the live dashboard. Keep deployment test records unless deletion is explicitly approved.
 
 `GEMINI_MODEL` defaults to the free-tier `gemini-3.1-flash-lite`; update it in `wrangler.jsonc` if you want to use a different Gemini model.
 
