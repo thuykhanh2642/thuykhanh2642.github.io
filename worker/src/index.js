@@ -46,14 +46,9 @@ function sanitizeHistory(history) {
 }
 
 function outputText(response) {
-  if (typeof response.output_text === "string" && response.output_text.trim()) {
-    return response.output_text.trim();
-  }
-
-  return (response.output || [])
-    .flatMap((item) => item.content || [])
-    .filter((content) => content.type === "output_text")
-    .map((content) => content.text)
+  return (response.candidates || [])
+    .flatMap((candidate) => candidate.content?.parts || [])
+    .map((part) => part.text || "")
     .join("\n")
     .trim();
 }
@@ -77,7 +72,7 @@ export default {
       return json({ error: "Not found." }, 404, corsHeaders);
     }
 
-    if (!env.OPENAI_API_KEY || !env.OPENAI_MODEL) {
+    if (!env.GEMINI_API_KEY || !env.GEMINI_MODEL) {
       return json({ error: "The assistant is not configured yet." }, 503, corsHeaders);
     }
 
@@ -100,24 +95,32 @@ export default {
     }
 
     const history = sanitizeHistory(payload.history);
-    const input = [
-      ...history.map((message) => ({ role: message.role, content: message.content })),
-      { role: "user", content: question },
+    const contents = [
+      ...history.map((message) => ({
+        role: message.role === "assistant" ? "model" : "user",
+        parts: [{ text: message.content }],
+      })),
+      { role: "user", parts: [{ text: question }] },
     ];
 
     let upstream;
     try {
-      upstream = await fetch("https://api.openai.com/v1/responses", {
+      const model = encodeURIComponent(env.GEMINI_MODEL);
+      upstream = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${env.OPENAI_API_KEY}`,
+          "x-goog-api-key": env.GEMINI_API_KEY,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: env.OPENAI_MODEL,
-          instructions: PORTFOLIO_INSTRUCTIONS,
-          input,
-          max_output_tokens: 350,
+          systemInstruction: {
+            parts: [{ text: PORTFOLIO_INSTRUCTIONS }],
+          },
+          contents,
+          generationConfig: {
+            maxOutputTokens: 350,
+            temperature: 0.3,
+          },
           store: false,
         }),
       });
@@ -126,7 +129,7 @@ export default {
     }
 
     if (!upstream.ok) {
-      console.error("OpenAI request failed", upstream.status);
+      console.error("Gemini request failed", upstream.status);
       return json({ error: "The assistant is temporarily unavailable. Please try again later." }, 502, corsHeaders);
     }
 

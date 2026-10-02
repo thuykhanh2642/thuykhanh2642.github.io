@@ -11,3 +11,5 @@ tags: []
 - Typography uses DM Serif Display for display headings and DM Sans for navigation, body copy, and technical detail.
 - Fine-pointer users receive one subtle moss cursor wash across the site. The homepage XFC capture additionally tilts and receives a soft glint; touch and reduced-motion users receive static visuals.
 - Keep project claims grounded in supplied evidence and prefer real project screenshots, gameplay, or artifacts over decorative visual filler.
+- `ask.html` is a transparent AI portfolio guide, not an impersonation of Khanh. It sends questions only to the separately deployed `worker/` Cloudflare Worker.
+- The Worker uses the approved facts in `worker/src/knowledge.js`, restricts browser origins, rate-limits requests, and keeps the Gemini API key out of GitHub Pages. `chat-config.js` intentionally has no endpoint until the Worker is deployed.
