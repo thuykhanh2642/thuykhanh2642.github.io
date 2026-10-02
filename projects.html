@@ -67,7 +67,7 @@
         <article class="card project-card">
           <span class="date-pill">Sep 2024 - Sep 2025</span>
           <h3>Stock Prediction Model</h3>
-          <p class="muted">Streamlit application for stock-trend prediction, training, and visualization with time-aware model evaluation.</p>
+          <p class="muted">Streamlit application for stock-trend prediction, training, and visualization with time-series validation.</p>
           <div class="tags" style="margin:18px 0;">
             <span class="tag">Python</span>
             <span class="tag">Scikit-Learn</span>
@@ -76,7 +76,7 @@
           </div>
           <ul>
             <li>Built a feature pipeline with RSI, MACD, Bollinger bands, moving averages, and lag features.</li>
-            <li>Used TimeSeriesSplit, RandomizedSearchCV, and GridSearchCV for realistic evaluation and tuning.</li>
+            <li>Used TimeSeriesSplit, RandomizedSearchCV, and GridSearchCV for validation and tuning without shuffling the data.</li>
             <li>Achieved an F1-score of 0.76 for predicting price increases and 0.69 weighted F1 overall.</li>
           </ul>
           <div class="actions">

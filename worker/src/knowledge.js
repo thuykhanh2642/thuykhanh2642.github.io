@@ -397,7 +397,7 @@ Features explored include:
 
 Technical focus:
 - Leakage-aware time-series evaluation
-- Time-aware validation
+- Time-series validation
 - Feature engineering
 - Hyperparameter optimization
 - Model comparison
@@ -409,7 +409,7 @@ Validation:
 - Walk-forward-style evaluation
 - RandomizedSearchCV
 - GridSearchCV
-- Other time-aware evaluation strategies when appropriate
+- Other time-series validation strategies when appropriate
 
 Recorded experimental results:
 - Approximately 0.76 F1 for predicting upward price movement in one documented
